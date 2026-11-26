@@ -59,3 +59,5 @@ CREDIT_ATTR = {'T': 1, 'N': 5}
 CREDIT_CENTRE = 41
 RANK_MAP_BLOB = 0x04AD09
 RANK_TABLE = 0x014FB8
+# Prize chr tiles left unreferenced by the Vol. 4 map (old "9" digit art; "11" reuses one tile) - usable for labels
+EXTRA_FREE = {0x042C16: [0x07, 0x08, 0x15, 0x16]}

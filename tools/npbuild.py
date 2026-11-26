@@ -400,7 +400,8 @@ def graphic_labels(rom, cache):
         return [set(L.usage()) for k2, L in layers.items() if k2 != k and L.chr_src == layers[k].chr_src]
     pools = {}
     for k, L in layers.items():   # one shared pool per char blob
-        pools.setdefault(L.chr_src, labels.free_tiles(L, others(k)))
+        pools.setdefault(L.chr_src, labels.free_tiles(L, others(k)) +
+                         list(getattr(V, 'EXTRA_FREE', {}).get(L.chr_src, [])))   # unreferenced leftover art
     for lab in load_labels():
         L = layers[lab['layer']]
         st = V.LABEL_STYLES[lab['style']]
