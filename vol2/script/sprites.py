@@ -35,6 +35,7 @@ PANELS = [(tuple(remap(f) for f in fs), lines) for fs, lines in _v1.PANELS]
 MENU_FRAMES = [remap(f) for f in _v1.MENU_FRAMES] + [125]
 MENU_FREE = list(range(0x0F0, 0x0FC)) + list(range(0x160, 0x180)) + list(range(0x154, 0x160)) + list(range(0x144, 0x150))
 NOT_GAME_FRAMES = (125,)   # menu-sheet frame whose tile numbers overlap the game sheet's window text
+NON_PRO_FRAMES = (remap(301), 319)   # hint prompt + Ready? window: never shown in Professional mode (issue #4)
 
 # new in Vol. 2: in-game "Ready?" window (Ready? / スタート / ヒントをつかう / キャンセル); "Ready?" is kept
 FRAMES[319] = ([11, 21, 31], [dict(y=11, text='START', pal=3, x=-21),

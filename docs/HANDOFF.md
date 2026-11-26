@@ -36,6 +36,10 @@ Read this first when resuming on a new machine or in a new session.
 * Small text: always `tools/tinyfont.py` (users flagged mixed fonts as inconsistent).
 * In-game sprite tiles 0x180–0x1FF are streamed during puzzles; verify any "free" tile against live VRAM on every
   screen its frame appears on.
+* Issue #4 (fixed in v1.6.1): Professional/Extra (clock, "Go!!"/"Ready") overwrite game-sheet tiles 0xB0-0xBF, and Versus
+  overwrites them too. Window text now comes from reclaimed old text tiles + 0xC0-0xDF; only windows those modes never
+  show (`NON_PRO_FRAMES`: hint prompt, Ready? window) may use 0xB0-0xBF, and the build asserts this. Test new window
+  text in Beginner, Professional, Extra and Versus, not just Regular.
 * Long-pointer pattern matches are only trusted inside banks C0–C1.
 * Never commit ROMs or ROM-derived binaries; screenshots for the README live on the `screenshots` branch.
 * Releases: one project-wide version number (v1.1, v1.2, …). Every release contains the current `.bps` of every

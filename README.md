@@ -40,27 +40,27 @@ Use any BPS patcher (e.g. [Floating IPS](https://www.smwcentral.net/?p=section&a
 **Vol. 1** — source ROM (No-Intro): `Picross NP Vol. 1 (Japan) (Rev 1) (NP).sfc`
 * size 1,048,576 bytes, no copier header
 * CRC32 `E6F29429`, SHA-1 `75b2b639e73775f1709059a8b1b63f61983de0e8`
-* patched result: CRC32 `631BE964`, SHA-1 `1e27a01a6e47111ce3ed40de2ca0416f25d5d0c6`
+* patched result: CRC32 `55ED6397`, SHA-1 `0b8b492f194eb3c1b8a46ccc39e3c97b7f5559c3`
 
 **Vol. 2** — source ROM (No-Intro): `Picross NP Vol. 2 (Japan) (Rev 1) (NP).sfc`
 * size 1,048,576 bytes, no copier header
 * CRC32 `1DF8A75C`, SHA-1 `dbad4ed4f1c4bb54bf44223833c056179c4cc4f2`
-* patched result: CRC32 `ED039641`, SHA-1 `7513dcdaca7b72c8f6e280e97b82bb4f438876ca`
+* patched result: CRC32 `2517BDC8`, SHA-1 `b45f5021a778523e3560c6f6cad6acaee0f5a35b`
 
 **Vol. 3** — source ROM (No-Intro): `Picross NP Vol. 3 (Japan) (Rev 1) (NP).sfc`
 * size 1,048,576 bytes, no copier header
 * CRC32 `717243E7`, SHA-1 `456d8a187edd2f35731f58656b94fcaf65daae40`
-* patched result: CRC32 `F5B40C0E`, SHA-1 `d93598c1de9ffad5a49dcae8ba9c5f1fac260ce8`
+* patched result: CRC32 `79C58D94`, SHA-1 `420e64dc7f81bf837672dc4aebc93cd40e317f8c`
 
 **Vol. 4** — source ROM (No-Intro): `Picross NP Vol. 4 (Japan) (Rev 1) (NP).sfc`
 * size 1,048,576 bytes, no copier header
 * CRC32 `696778FA`, SHA-1 `2239de70d257f0d66d21dddd716d3cc9413523ee`
-* patched result: CRC32 `CFB358FD`, SHA-1 `8915890a854f3dcf19950e3d144be5ddc06f98cb`
+* patched result: CRC32 `C5FD4857`, SHA-1 `f9e617ff27ca8c65e69ddedf42b42e3c1a881b66`
 
 **Vol. 5** — source ROM (No-Intro): `Picross NP Vol. 5 (Japan) (Rev 1) (NP).sfc`
 * size 1,048,576 bytes, no copier header
 * CRC32 `5AC117C9`, SHA-1 `4f7c151ee6d3e0735dbe55d4958942aa9003909c`
-* patched result: CRC32 `18CD43AB`, SHA-1 `b01ebb42df906a4c59e00217bb76516d66ec57f2`
+* patched result: CRC32 `29F7782B`, SHA-1 `621c91c6b1907bafc2c346cdae9c6ebdce6a7069`
 
 Releases are numbered for the whole project: each GitHub release contains the current patch for every
 finished volume.

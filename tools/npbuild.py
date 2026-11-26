@@ -123,7 +123,10 @@ class Rom:
     def fix_checksum(self):
         d = self.d
         d[0xFFDC:0xFFE0] = b'\xff\xff\x00\x00'
-        s = sum(d) & 0xFFFF
+        if len(d) == 0x180000:   # 1.5 MB (Vols. 6-8): the last 512 KB is mirrored to fill 2 MB
+            s = (sum(d[:0x100000]) + 2 * sum(d[0x100000:])) & 0xFFFF
+        else:
+            s = sum(d) & 0xFFFF
         d[0xFFDE] = s & 0xFF; d[0xFFDF] = s >> 8
         c = s ^ 0xFFFF
         d[0xFFDC] = c & 0xFF; d[0xFFDD] = c >> 8
@@ -456,14 +459,28 @@ def sprite_text(rom, cache):
     reclaim = sorted(t for t in old_text - kept if users.get(t, set()) <= rewritten and t < 0x180)
     for t in reclaim:
         sheet.put(t, np.zeros((8, 8), np.uint8))
-    sheet.free = sheet.free + reclaim
+    # old window-text tiles first: the original windows drew from them, so nothing overwrites them in any mode
+    # (issue #4: tiles 0xB0-0xBF of GAME_FREE are overwritten by the Professional-mode clock/"Go!!" graphics)
+    sheet.free = reclaim + sheet.free
     tut_sheet = spritetext.Sheet(cache, S.GAME_SHEET, free=S.TUTORIAL_FREE)
-    for frame, (ys, lines) in sorted(S.FRAMES.items()):
+    # Frames that Professional mode can show are drawn first, from tiles that survive every mode; the windows it
+    # never shows (hint prompt, Ready?) are drawn last and may also use GAME_FREE_NOT_PRO (issue #4).
+    not_pro = set(getattr(S, 'NON_PRO_FRAMES', ()))
+    order = sorted(S.FRAMES.items(), key=lambda kv: (kv[0] in not_pro, kv[0]))
+    extra_added = False
+    for frame, (ys, lines) in order:
         def remove(e, ys=ys):
             return (not e['big']) and e['tile'] not in S.WINDOW_TILES and (ys is None or e['y'] in ys)
+        if frame in not_pro and not extra_added:
+            sheet.free = sheet.free + [t for t in getattr(S, 'GAME_FREE_NOT_PRO', ()) if t not in sheet.free]
+            extra_added = True
         target = tut_sheet if frame in S.TUTORIAL_FRAMES else sheet
         spritetext.rewrite_frame(rom, frame, target, remove, lines, rom.alloc)
-        assert all(t < 0x180 for t in target.strips.get(('x',), [])) or True
+    pro_unsafe = set(getattr(S, 'GAME_FREE_NOT_PRO', ()))
+    for f in S.FRAMES:
+        if f not in not_pro and f not in S.TUTORIAL_FRAMES:
+            for e in metasprite.parse_frame(rom.d, f):
+                assert e['big'] or e['tile'] not in pro_unsafe, 'frame %d uses a tile Professional mode overwrites' % f
     for k, tiles in sheet.strips.items():
         assert all(t < 0x180 for t in tiles), 'in-game window text placed in streamed tile rows'
     badges = cache.get(S.BADGE_BLOB)

@@ -8,7 +8,11 @@ Window frames are metasprites (see tools/metasprite.py); window parts are kept, 
 GAME_SHEET = 0x03585E
 # Blank tiles in the in-game sheet that are never overwritten during play (checked against VRAM in a live
 # puzzle). Rows 0x180-0x1FF are streamed over during puzzles, so only the tutorial menu may use 0x1A0+.
-GAME_FREE = list(range(0x0B0, 0x0E0))
+GAME_FREE = list(range(0x0C0, 0x0E0))
+# 0x0B0-0x0BF are blank in the sheet but Professional mode loads its clock/"Go!!" graphics there (issue #4), so only
+# windows Professional never shows (NON_PRO_FRAMES: the hint prompt, and the Ready? window in Vol. 2+) may use them.
+GAME_FREE_NOT_PRO = list(range(0x0B0, 0x0C0))
+NON_PRO_FRAMES = (301,)
 TUTORIAL_FREE = list(range(0x1A0, 0x200))
 TUTORIAL_FRAMES = (137, 156)
 
