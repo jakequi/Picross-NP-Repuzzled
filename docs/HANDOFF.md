@@ -22,7 +22,7 @@ Read this first when resuming on a new machine or in a new session.
 |---|---|
 | Vol. 1 | Complete (latest release v1.3: all 30 certificate titles translated, Poké Doll). |
 | Vol. 2 | Complete (first in v1.2; v1.3 adds the 30 certificate titles, Rotary Phone, Baby Bowser). `vol2/script/sprites.py` loads Vol. 1's spec and renumbers frames (<125 same, 125–317 +1, ≥318 +2); new frames 319 (Ready? window) and 125 (Versus round picker, `CUSTOM_PANELS`). All screens checked in Mesen. |
-| Vol. 3 | Complete (release v1.4). Same engine/frames as Vol. 2; addresses mapped with `tools/match_volume.py`. Tutorial identical to Vol. 2; Kirby characters 26–37; Special 86–94 hide the keyword 雲 (cloud), names follow the pictures (X button shows a big illustration, no extra text). Not seen in emulator: credits page 6 (4 names, rows 9/11/14/16).
+| Vol. 3 | Complete (release v1.4). Same engine/frames as Vol. 2; addresses mapped with `tools/match_volume.py`. Tutorial identical to Vol. 2; Kirby characters 26–37; Special 86–94 hide the keyword 雲 (cloud), names follow the pictures (X button shows a big illustration, no extra text). Not seen in emulator: credits page 6 (4 names, rows 9/11/14/16). |
 | Vol. 4–8 | Not started. Recipe: copy `vol3/` → `volN/`, run `tools/survey.py` + `tools/match_volume.py` (old vs new ROM, list of Vol. 3 blob addresses) to fill `volume.py`, diff tutorial/puzzle names with a script, read help/title/credits graphics, build, check, release. |
 
 ## Rules learned the hard way
