@@ -8,7 +8,7 @@ included in this repository.
 |---|---|---|
 | Picross NP Vol. 1 | ✅ Complete | [`patches/Picross_NP_Vol1_English.bps`](patches/) |
 | Picross NP Vol. 2 | ✅ Complete | [`patches/Picross_NP_Vol2_English.bps`](patches/) |
-| Picross NP Vol. 3 | Planned | — |
+| Picross NP Vol. 3 | ✅ Complete | [`patches/Picross_NP_Vol3_English.bps`](patches/) |
 | Picross NP Vol. 4 | Planned | — |
 | Picross NP Vol. 5 | Planned | — |
 | Picross NP Vol. 6 | Planned | — |
@@ -47,6 +47,11 @@ Use any BPS patcher (e.g. [Floating IPS](https://www.smwcentral.net/?p=section&a
 * CRC32 `1DF8A75C`, SHA-1 `dbad4ed4f1c4bb54bf44223833c056179c4cc4f2`
 * patched result: CRC32 `ED039641`, SHA-1 `7513dcdaca7b72c8f6e280e97b82bb4f438876ca`
 
+**Vol. 3** — source ROM (No-Intro): `Picross NP Vol. 3 (Japan) (Rev 1) (NP).sfc`
+* size 1,048,576 bytes, no copier header
+* CRC32 `717243E7`, SHA-1 `456d8a187edd2f35731f58656b94fcaf65daae40`
+* patched result: CRC32 `F5B40C0E`, SHA-1 `d93598c1de9ffad5a49dcae8ba9c5f1fac260ce8`
+
 Releases are numbered for the whole project: each GitHub release contains the current patch for every
 finished volume.
 
@@ -68,6 +73,8 @@ The stylised ピクロス logo artwork is left as is.
 Character mode, with their official English names), the tutorial, the new "Ready?" window
 (Start / Use a Hint / Cancel), the Versus round picker, the prize contest, certificate and credits.
 
+**Vol. 3** has the same coverage, with Kirby characters in Character mode (official English names).
+
 ## Building from source
 
 Requirements: Python 3.10+, `pip install pillow numpy`, and the fonts Arial Bold, Arial Narrow Bold and
@@ -76,6 +83,7 @@ Verdana Bold (standard on Windows; elsewhere set `PICROSS_FONT_DIR`).
 ```
 python vol1/build.py "path/to/Picross NP Vol. 1 (Japan) (Rev 1) (NP).sfc"
 python vol2/build.py "path/to/Picross NP Vol. 2 (Japan) (Rev 1) (NP).sfc"
+python vol3/build.py "path/to/Picross NP Vol. 3 (Japan) (Rev 1) (NP).sfc"
 ```
 
 Output goes to `volN/out/` (`.sfc`, `.bps`, `.ips`). Translations live in plain-text tables in `volN/script/`
@@ -86,7 +94,7 @@ Output goes to `volN/out/` (`.sfc`, `.bps`, `.ips`). Translations live in plain-
 | Path | Contents |
 |---|---|
 | `tools/` | Shared engine tools: LZ codec, variable-width font, metasprites, tile/label renderers, BPS, emulator driver, auto-solver, save generator, disassembler |
-| `vol1/`, `vol2/` | Per-volume addresses (`volume.py`), translation tables (`script/`), notes |
+| `vol1/` … `vol3/` | Per-volume addresses (`volume.py`), translation tables (`script/`), notes |
 | `docs/METHOD.md` | Step-by-step method for translating the other volumes with these tools |
 | `patches/` | Released patches |
 
