@@ -13,7 +13,15 @@ Requirements: Python 3.10+, `pip install pillow numpy`, the fonts listed in `too
 cp -r vol1 volN                       # start from the Vol. 1 build and translation tables
 # put the volN ROM in volN/ (never commit it), update ROM_NAME / ROM_CRC32 in volN/build.py
 ```
-Every address in `volN/build.py` and `volN/script/sprites.py` must be re-checked; the tools below find them.
+Every address in `volN/build.py` and `volN/script/sprites.py` must be re-checked. Start with the survey, which finds
+the engine structures by code signature (validated on Vol. 1, where it reproduces every address in `vol1/NOTES.md`):
+```
+python tools/survey.py volN/ROM.sfc
+#   lz_decompressor / lz_call_sites, vwf_glyph_table, sjis_row_table, kanji_list, metasprite_table,
+#   tutorial_base, puzzle_db, puzzle_size_table, mode_table, credit_pages, free_space
+```
+Update the constants in `tools/puzzles.py`, `tools/tutorial.py`, `tools/metasprite.py`, `tools/credits.py`, `tools/vwf.py`
+and `volN/build.py` from its output; anything the survey cannot find is a signal that routine changed in that volume.
 
 ## 1. Find the compressed blobs and their call sites
 ```
