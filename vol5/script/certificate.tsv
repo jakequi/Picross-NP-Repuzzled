@@ -1,0 +1,13 @@
+# Bonus certificates (BG1, char blob C4:210B, 8x16 glyph font). map: full = C4:7084 (all clear), template = C4:7C02.
+# Columns: map, row, start column (or c = centre), Japanese, English. Runtime blanks (mode name row 11, rank title row 17) are left free.
+full	9	c	全問制覇おめでとう!	Congratulations!
+full	11	c	あなたはピクロスNP	You solved every
+full	13	c	Vol.1を見事全問制覇しま	puzzle in Picross
+full	15	c	したので、ここに、	NP Vol.5! You are
+full	19	c	の称号を贈ります。	Well done!
+template	9	c	CLEARおめでとう!	Congratulations!
+template	11	7	あなたは	You beat
+template	11	22	を	!
+template	13	c	見事全問クリアしました	Every puzzle done!
+template	15	c	ので、ここに、	You are now...
+template	19	c	の称号を贈ります。	Well done!

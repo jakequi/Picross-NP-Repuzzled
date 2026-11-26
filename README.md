@@ -10,7 +10,7 @@ included in this repository.
 | Picross NP Vol. 2 | ✅ Complete | [`patches/Picross_NP_Vol2_English.bps`](patches/) |
 | Picross NP Vol. 3 | ✅ Complete | [`patches/Picross_NP_Vol3_English.bps`](patches/) |
 | Picross NP Vol. 4 | ✅ Complete | [`patches/Picross_NP_Vol4_English.bps`](patches/) |
-| Picross NP Vol. 5 | Planned | — |
+| Picross NP Vol. 5 | ✅ Complete | [`patches/Picross_NP_Vol5_English.bps`](patches/) |
 | Picross NP Vol. 6 | Planned | — |
 | Picross NP Vol. 7 | Planned | — |
 | Picross NP Vol. 8 | Planned | — |
@@ -57,6 +57,11 @@ Use any BPS patcher (e.g. [Floating IPS](https://www.smwcentral.net/?p=section&a
 * CRC32 `696778FA`, SHA-1 `2239de70d257f0d66d21dddd716d3cc9413523ee`
 * patched result: CRC32 `CFB358FD`, SHA-1 `8915890a854f3dcf19950e3d144be5ddc06f98cb`
 
+**Vol. 5** — source ROM (No-Intro): `Picross NP Vol. 5 (Japan) (Rev 1) (NP).sfc`
+* size 1,048,576 bytes, no copier header
+* CRC32 `5AC117C9`, SHA-1 `4f7c151ee6d3e0735dbe55d4958942aa9003909c`
+* patched result: CRC32 `18CD43AB`, SHA-1 `b01ebb42df906a4c59e00217bb76516d66ec57f2`
+
 Releases are numbered for the whole project: each GitHub release contains the current patch for every
 finished volume.
 
@@ -82,6 +87,9 @@ Character mode, with their official English names), the tutorial, the new "Ready
 
 **Vol. 4** has the same coverage, with the Star Fox 64 cast in Character mode (official English names).
 
+**Vol. 5** has the same coverage, with The Legend of Zelda: Ocarina of Time characters in Character mode
+(official English names).
+
 ## Building from source
 
 Requirements: Python 3.10+, `pip install pillow numpy`, and the fonts Arial Bold, Arial Narrow Bold and
@@ -92,6 +100,7 @@ python vol1/build.py "path/to/Picross NP Vol. 1 (Japan) (Rev 1) (NP).sfc"
 python vol2/build.py "path/to/Picross NP Vol. 2 (Japan) (Rev 1) (NP).sfc"
 python vol3/build.py "path/to/Picross NP Vol. 3 (Japan) (Rev 1) (NP).sfc"
 python vol4/build.py "path/to/Picross NP Vol. 4 (Japan) (Rev 1) (NP).sfc"
+python vol5/build.py "path/to/Picross NP Vol. 5 (Japan) (Rev 1) (NP).sfc"
 ```
 
 Output goes to `volN/out/` (`.sfc`, `.bps`, `.ips`). Translations live in plain-text tables in `volN/script/`
@@ -102,7 +111,7 @@ Output goes to `volN/out/` (`.sfc`, `.bps`, `.ips`). Translations live in plain-
 | Path | Contents |
 |---|---|
 | `tools/` | Shared engine tools: LZ codec, variable-width font, metasprites, tile/label renderers, BPS, emulator driver, auto-solver, save generator, disassembler |
-| `vol1/` … `vol4/` | Per-volume addresses (`volume.py`), translation tables (`script/`), notes |
+| `vol1/` … `vol5/` | Per-volume addresses (`volume.py`), translation tables (`script/`), notes |
 | `docs/METHOD.md` | Step-by-step method for translating the other volumes with these tools |
 | `patches/` | Released patches |
 

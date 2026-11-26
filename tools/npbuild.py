@@ -407,11 +407,12 @@ def graphic_labels(rom, cache):
         st = V.LABEL_STYLES[lab['style']]
         img = render_label_image(L, lab['rect'], st, lab['en'])
         pool = pools[L.chr_src]
-        labels.write_label(L, lab['rect'], img, pool, other_maps=others(lab['layer']),
-                           bg=st.get('bg'), blank=st.get('blank', 0))
+        left = labels.write_label(L, lab['rect'], img, pool, other_maps=others(lab['layer']),
+                                  bg=st.get('bg'), blank=st.get('blank', 0))
         used = {L.entry(x, y) & 0x3FF for y in range(lab['rect'][1], lab['rect'][1] + lab['rect'][3])
                 for x in range(lab['rect'][0], lab['rect'][0] + lab['rect'][2])}
-        pool[:] = [t for t in pool if t not in used]
+        # the label's own old tiles it did not need (blanked, used nowhere else) go to the end of the pool
+        pool[:] = [t for t in pool if t not in used] + [t for t in left if t not in pool and t not in used]
     print('  %d labels' % len(load_labels()))
     # menu "★クリア" stamp (BG2 tiles 0x0C-0x13 over 0x14-0x1B in char blob C2:5702) -> CLEAR
     import numpy as np, tinyfont
