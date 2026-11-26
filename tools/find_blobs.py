@@ -6,7 +6,7 @@ ROM = sys.argv[1]
 d = open(ROM, 'rb').read()
 def rom(bank, addr): return ((bank & 0x3F) << 16) | addr
 sites = []
-for m in re.finditer(rb'\x22\x92\x19\xc0', d):
+for m in re.finditer(rb'\x22[\x8e\x92]\x19\xc0', d):   # JSL C0:1992 (Vols 1-3) / C0:198E (Vol 4)
     j = m.start()
     pre = d[j - 15:j]
     # pattern: PEA dbank / PEA daddr / PEA sbank / PEA saddr / LDA #len

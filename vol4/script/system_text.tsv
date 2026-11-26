@@ -1,0 +1,3 @@
+# Save-data warnings (instant VWF print; PEA bank / PEA addr at the call site).
+0	ＤＡＴＡ１が壊れているのでクリアします。	DATA 1 is corrupted. Clearing it.
+1	ＤＡＴＡ２が壊れているのでクリアします。	DATA 2 is corrupted. Clearing it.
