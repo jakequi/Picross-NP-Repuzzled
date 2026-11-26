@@ -23,7 +23,7 @@ Use any BPS patcher (e.g. [Floating IPS](https://www.smwcentral.net/?p=section&a
 **Vol. 1** — source ROM (No-Intro): `Picross NP Vol. 1 (Japan) (Rev 1) (NP).sfc`
 * size 1,048,576 bytes, no copier header
 * CRC32 `E6F29429`, SHA-1 `75b2b639e73775f1709059a8b1b63f61983de0e8`
-* patched result: CRC32 `877E8547`, SHA-1 `af72d54572be726d84fb5a579cba0c3eac2892c6`
+* patched result: CRC32 `D611A49A`, SHA-1 `7192728bbd1aa7bdc3757feddf85d268ee4daafe`
 
 ## What's translated (Vol. 1)
 

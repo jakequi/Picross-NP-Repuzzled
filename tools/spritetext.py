@@ -78,32 +78,26 @@ def repaint_row(sheet, t0, n, x0, x1, text, fill=0xF, outline=0xE, bg=0xD, align
     sheet.write_strip(t0, img)
 
 
-def badge(text, w=64, h=16, text_col=7, aa_col=8, fill=0xD, border=0xF, font='verdanab.ttf', size=8):
-    """Rounded white badge with red text, like the mode labels under the clock."""
-    f = ImageFont.truetype(os.path.join(FONT_DIR, font), size)
-    while True:
-        bb = f.getbbox(text)
-        tw = bb[2] - bb[0]
-        if tw + 8 <= w or size <= 6:
-            break
-        size -= 1
-        f = ImageFont.truetype(os.path.join(FONT_DIR, font), size)
-    bw = min(w, tw + 8)
+def badge(text, w=None, h=16, text_col=7, aa_col=8, fill=0xD, border=0xF, **_):
+    """Rounded badge (border + fill) with text in the pixel font used by all small text.
+    w=None sizes the badge to the text (rounded up to whole tiles)."""
+    ink = tinyfont.text_bitmap(text)
+    tw = ink.shape[1]
+    bw = tw + 8
+    if w is None:
+        w = (bw + 7) // 8 * 8
+    if bw > w:
+        raise ValueError('badge text %r too wide (%d > %d)' % (text, bw, w))
     x0 = (w - bw) // 2
     img = np.zeros((h, w), np.uint8)
-    # rounded rectangle rows 0..12
-    top, bot = 0, 12
+    top, bot = 0, 12                       # rounded rectangle rows 0..12, like the original badges
     for y in range(top, bot + 1):
         inset = 2 if y in (top, bot) else (1 if y in (top + 1, bot - 1) else 0)
         img[y, x0 + inset:x0 + bw - inset] = border
         if top < y < bot:
-            inset2 = inset + 1
-            img[y, x0 + inset2:x0 + bw - inset2] = fill
-    im = Image.new('L', (w, h), 0)
-    ImageDraw.Draw(im).text((x0 + (bw - tw) // 2 - bb[0], 2 - bb[1] + (9 - (bb[3] - bb[1])) // 2), text, font=f, fill=255)
-    ink = np.asarray(im) > 110
-    ink[bot - 1:, :] = False
-    img[ink] = text_col
+            img[y, x0 + inset + 1:x0 + bw - inset - 1] = fill
+    tx = x0 + (bw - tw) // 2
+    img[4:9, tx:tx + tw][ink] = text_col
     return img
 
 

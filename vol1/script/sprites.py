@@ -6,8 +6,11 @@ Window frames are metasprites (see tools/metasprite.py); window parts are kept, 
 """
 
 GAME_SHEET = 0x03585E
-# blank tiles in the in-game sheet that are never overwritten at runtime (checked against VRAM)
-GAME_FREE = list(range(0x0B0, 0x0E0)) + list(range(0x1A0, 0x200))
+# Blank tiles in the in-game sheet that are never overwritten during play (checked against VRAM in a live
+# puzzle). Rows 0x180-0x1FF are streamed over during puzzles, so only the tutorial menu may use 0x1A0+.
+GAME_FREE = list(range(0x0B0, 0x0E0))
+TUTORIAL_FREE = list(range(0x1A0, 0x200))
+TUTORIAL_FRAMES = (137, 156)
 
 # Pause panel: 8px rows of 10 tiles baked into 16x16 sprites (white panel, text left at px 8).
 # (first tile, pixel x0, x1, English)

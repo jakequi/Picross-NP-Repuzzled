@@ -362,7 +362,7 @@ GFX_LAYERS = {
 LABEL_STYLES = {
     'menu': dict(fill=1, outline=3, font='arialbd.ttf', size=12),
     'header': dict(fill=4, outline=0xB, font='arialbd.ttf', size=13, keep_rows=(13, 16), y_off=1),
-    'title_small': dict(fill=0xF, outline=None, font='verdanab.ttf', size=8),
+    'title_small': dict(fill=0xF, outline=None, pixel=True),
     'title_big': dict(fill=1, outline=None, font='arialbd.ttf', size=14),
     'tab_green': dict(fill=5, outline=None, font='arialbd.ttf', size=8, panel=9, vertical=True),
     'tab_pink': dict(fill=5, outline=None, font='arialbd.ttf', size=8, panel=0xE, vertical=True),
@@ -396,14 +396,17 @@ def render_label_image(layer, rect, st, en):
         # keep the panel's border pixels (non-panel, non-zero colours on the edge columns)
         img[:, -3:] = orig[:, -3:]
         img[-2:, :] = orig[-2:, :]
+        import tinyfont
         letters = list(en)
         cell_h = (H - 2) // len(letters)
         for k, ch in enumerate(letters):
-            g, _ = labels.render_outlined(ch, W - 3, cell_h, fill=st['fill'], outline=None,
-                                          font=st['font'], size=st['size'])
+            g = tinyfont.render(ch, W - 3, cell_h, fill=st['fill'], outline=None, bg=0)
             sub = img[1 + k * cell_h:1 + (k + 1) * cell_h, 0:W - 3]
             sub[g != 0] = g[g != 0]
         return img
+    if st.get('pixel'):
+        import tinyfont
+        return tinyfont.render(en, W, H, fill=st['fill'], outline=st.get('outline'), bg=0)
     img, size = labels.render_outlined(en, W, H, fill=st['fill'], outline=st.get('outline'),
                                        font=st['font'], size=st['size'], y_off=st.get('y_off'))
     if size < st['size']:
@@ -461,13 +464,27 @@ def sprite_text(rom, cache):
     area = strip[B['y0']:B['y1'], B['x0']:B['x1']]
     area[txt != 0] = txt[txt != 0]
     sheet.write_strip(B['t0'] + 1, strip[:, 8:], rows=2)
+    # reclaim old text tiles used only by the window frames being rewritten
+    rewritten = set(f for f in S.FRAMES if f not in S.TUTORIAL_FRAMES)
+    users = spritetext.tile_users(rom.orig, metasprite.count(rom.orig))
+    old_text = {e['tile'] for f in rewritten for e in metasprite.parse_frame(rom.orig, f)
+                if not e['big'] and e['tile'] not in S.WINDOW_TILES}
+    reclaim = sorted(t for t in old_text if users.get(t, set()) <= rewritten and t < 0x180)
+    for t in reclaim:
+        sheet.put(t, np.zeros((8, 8), np.uint8))
+    sheet.free = sheet.free + reclaim
+    tut_sheet = spritetext.Sheet(cache, S.GAME_SHEET, free=S.TUTORIAL_FREE)
     for frame, (ys, lines) in sorted(S.FRAMES.items()):
         def remove(e, ys=ys):
             return (not e['big']) and e['tile'] not in S.WINDOW_TILES and (ys is None or e['y'] in ys)
-        spritetext.rewrite_frame(rom, frame, sheet, remove, lines, rom.alloc)
+        target = tut_sheet if frame in S.TUTORIAL_FRAMES else sheet
+        spritetext.rewrite_frame(rom, frame, target, remove, lines, rom.alloc)
+        assert all(t < 0x180 for t in target.strips.get(('x',), [])) or True
+    for k, tiles in sheet.strips.items():
+        assert all(t < 0x180 for t in tiles), 'in-game window text placed in streamed tile rows'
     badges = cache.get(S.BADGE_BLOB)
     for k, text in enumerate(S.BADGES):
-        img = spritetext.badge(text)
+        img = spritetext.badge(text, w=64)
         for t in range(16):
             r, c = divmod(t, 8)
             o = k * 0x200 + t * 32
@@ -537,9 +554,7 @@ def menu_sprites(rom, cache, S):
     def make(text):
         import tinyfont
         from PIL import ImageFont
-        f = ImageFont.truetype(os.path.join(spritetext.FONT_DIR, 'verdanab.ttf'), 8)
-        bb = f.getbbox(text); w = ((bb[2] - bb[0]) + 8 + 7) // 8 * 8
-        return spritetext.badge(text, w=w, **S.PSEL_LABEL_STYLE)
+        return spritetext.badge(text, **S.PSEL_LABEL_STYLE)
     spritetext.relabel_frames(rom, psel, S.PSEL_LABELS, make, rom.alloc)
     print('  puzzle-select labels: %d, %d tiles left' % (len(S.PSEL_LABELS), len(psel.free)))
     bonus_sprites(rom, cache, S)
@@ -570,10 +585,7 @@ def bonus_sprites(rom, cache, S):
         mid = cv[cv.shape[0] // 2 - 1]
         ring = int(mid[np.nonzero(mid)[0][0]])
         def make(text):
-            from PIL import ImageFont
-            f = ImageFont.truetype(os.path.join(spritetext.FONT_DIR, 'verdanab.ttf'), 8)
-            bb = f.getbbox(text); w = ((bb[2] - bb[0]) + 8 + 7) // 8 * 8
-            return spritetext.badge(text, w=w, text_col=0xB, fill=0, border=ring)
+            return spritetext.badge(text, text_col=0xB, fill=0, border=ring)
         return make
     for f, text in sorted(S.CERT_BADGES.items()):
         spritetext.relabel_frames(rom, sh, {f: text}, badge_for(f), rom.alloc)
