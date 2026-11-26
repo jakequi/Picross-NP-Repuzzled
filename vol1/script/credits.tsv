@@ -1,6 +1,6 @@
 # Bonus pages (table C4:8421). Columns: page, row (top map row of the 16px line), kind (T = title colour, N = name colour), Japanese, English
-# Page 0 keeps its decoration records and only replaces the rank title. Max ~20 characters per line.
-0	14	T	ピクロス神	Picross Master
+# Page 0 is the "Picross NP Vol.x / Staff" title page: its logo records are kept, the word Staff replaced. Max ~20 characters per line.
+0	14	T	スタッフ	Staff
 1	9	T	プログラマー	Programmer
 1	12	N	ふなこしまさのり	Masanori Funakoshi
 2	8	T	アディショナル	Additional

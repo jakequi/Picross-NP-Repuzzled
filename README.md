@@ -7,7 +7,7 @@ included in this repository.
 | Volume | Status | Patch |
 |---|---|---|
 | Picross NP Vol. 1 | ✅ Complete | [`patches/Picross NP Vol. 1 (English).bps`](patches/) |
-| Picross NP Vol. 2 | Planned | — |
+| Picross NP Vol. 2 | ✅ Complete | [`patches/Picross NP Vol. 2 (English).bps`](patches/) |
 | Picross NP Vol. 3 | Planned | — |
 | Picross NP Vol. 4 | Planned | — |
 | Picross NP Vol. 5 | Planned | — |
@@ -40,7 +40,15 @@ Use any BPS patcher (e.g. [Floating IPS](https://www.smwcentral.net/?p=section&a
 **Vol. 1** — source ROM (No-Intro): `Picross NP Vol. 1 (Japan) (Rev 1) (NP).sfc`
 * size 1,048,576 bytes, no copier header
 * CRC32 `E6F29429`, SHA-1 `75b2b639e73775f1709059a8b1b63f61983de0e8`
-* patched result: CRC32 `D611A49A`, SHA-1 `7192728bbd1aa7bdc3757feddf85d268ee4daafe`
+* patched result: CRC32 `08BB00DE`, SHA-1 `24b5337adb4a977e85c0a09f6803bd0babb667a5`
+
+**Vol. 2** — source ROM (No-Intro): `Picross NP Vol. 2 (Japan) (Rev 1) (NP).sfc`
+* size 1,048,576 bytes, no copier header
+* CRC32 `1DF8A75C`, SHA-1 `dbad4ed4f1c4bb54bf44223833c056179c4cc4f2`
+* patched result: CRC32 `5D7A2A7A`, SHA-1 `9de5643dfd21ecb33ad5af7a3843d47cb3500854`
+
+Releases are numbered for the whole project: each GitHub release contains the current patch for every
+finished volume.
 
 ## What's translated (Vol. 1)
 
@@ -56,6 +64,10 @@ Everything Japanese in the game, verified screen by screen in an emulator:
 
 The stylised ピクロス logo artwork is left as is.
 
+**Vol. 2** has the same coverage: all 122 puzzle names (including the Yoshi's Island characters in
+Character mode, with their official English names), the tutorial, the new "Ready?" window
+(Start / Use a Hint / Cancel), the Versus round picker, the prize contest, certificate and credits.
+
 ## Building from source
 
 Requirements: Python 3.10+, `pip install pillow numpy`, and the fonts Arial Bold, Arial Narrow Bold and
@@ -63,9 +75,10 @@ Verdana Bold (standard on Windows; elsewhere set `PICROSS_FONT_DIR`).
 
 ```
 python vol1/build.py "path/to/Picross NP Vol. 1 (Japan) (Rev 1) (NP).sfc"
+python vol2/build.py "path/to/Picross NP Vol. 2 (Japan) (Rev 1) (NP).sfc"
 ```
 
-Output goes to `vol1/out/` (`.sfc`, `.bps`, `.ips`). Translations live in plain-text tables in `vol1/script/`
+Output goes to `volN/out/` (`.sfc`, `.bps`, `.ips`). Translations live in plain-text tables in `volN/script/`
 (`*.tsv`: id, Japanese, English) — edit them and rebuild. The build warns if a line is too wide for its box.
 
 ## Repository layout
@@ -73,7 +86,7 @@ Output goes to `vol1/out/` (`.sfc`, `.bps`, `.ips`). Translations live in plain-
 | Path | Contents |
 |---|---|
 | `tools/` | Shared engine tools: LZ codec, variable-width font, metasprites, tile/label renderers, BPS, emulator driver, auto-solver, save generator, disassembler |
-| `vol1/` | Vol. 1 build script, translation tables, technical notes (`NOTES.md`) |
+| `vol1/`, `vol2/` | Per-volume addresses (`volume.py`), translation tables (`script/`), notes |
 | `docs/METHOD.md` | Step-by-step method for translating the other volumes with these tools |
 | `patches/` | Released patches |
 

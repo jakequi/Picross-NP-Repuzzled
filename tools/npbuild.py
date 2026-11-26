@@ -444,9 +444,14 @@ def sprite_text(rom, cache):
     # reclaim old text tiles used only by the window frames being rewritten
     rewritten = set(f for f in S.FRAMES if f not in S.TUTORIAL_FRAMES)
     users = spritetext.tile_users(rom.orig, metasprite.count(rom.orig))
-    old_text = {e['tile'] for f in rewritten for e in metasprite.parse_frame(rom.orig, f)
-                if not e['big'] and e['tile'] not in S.WINDOW_TILES}
-    reclaim = sorted(t for t in old_text if users.get(t, set()) <= rewritten and t < 0x180)
+    other = set(getattr(S, 'NOT_GAME_FRAMES', ()))   # frames drawn from another sheet (same tile numbers)
+    users = {t: fs - other for t, fs in users.items()}
+    def removed(f, e):
+        ys = S.FRAMES[f][0]
+        return not e['big'] and e['tile'] not in S.WINDOW_TILES and (ys is None or e['y'] in ys)
+    old_text = {e['tile'] for f in rewritten for e in metasprite.parse_frame(rom.orig, f) if removed(f, e)}
+    kept = {e['tile'] for f in rewritten for e in metasprite.parse_frame(rom.orig, f) if not removed(f, e)}
+    reclaim = sorted(t for t in old_text - kept if users.get(t, set()) <= rewritten and t < 0x180)
     for t in reclaim:
         sheet.put(t, np.zeros((8, 8), np.uint8))
     sheet.free = sheet.free + reclaim
@@ -510,6 +515,15 @@ def menu_sprites(rom, cache, S):
                                           bg=S.PANEL_STYLE['bg'], y_top=1)
                     cv[cy - 3 + oy:cy + 4 + oy, x0 + ox:x1 + ox] = img
             spritetext.paint_frames(rom, sheet, [f], painter, rom.alloc, users, group=set(frames))
+    for P in getattr(S, 'CUSTOM_PANELS', []):
+        def painter(cv, ox, oy, P=P):
+            for (bx0, by0, bx1, by1), col in P['boxes']:
+                cv[by0 + oy:by1 + oy, bx0 + ox:bx1 + ox] = col
+            for top, text, fill, outline, bg, lx0, lx1, align in P['lines']:
+                img = tinyfont.render(text, lx1 - lx0, 7, fill=fill, outline=outline, bg=bg, align=align, y_top=1)
+                area = cv[top + oy:top + 7 + oy, lx0 + ox:lx1 + ox]
+                area[img != bg] = img[img != bg]
+        spritetext.paint_frames(rom, sheet, list(P['frames']), painter, rom.alloc, users, group=set(P['frames']))
     # mode labels: reclaim old label tiles, draw one label per frame as 8x8 entries
     reclaim = [t for t in S.MODE_LABEL_TILES if users.get(t, set()) <= set(S.MODE_LABELS)]
     for t in reclaim:

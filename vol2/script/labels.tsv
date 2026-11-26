@@ -1,0 +1,20 @@
+# Graphic text in BG tilemaps. Columns: id, layer, rect (tile x,y,w,h), style, Japanese, English
+# layers and styles are defined in build.py (GFX_LAYERS / LABEL_STYLES).
+menu_header	menu_bg2	15,3,9,2	header	もくじ	Contents
+menu_howto	menu_bg2	6,5,11,2	menu	あそびかた	How to Play
+menu_versus	menu_bg2	17,5,9,2	menu	対戦	Versus
+menu_beginner	menu_bg2	6,8,10,2	menu	ビギナー	Beginner
+menu_character	menu_bg2	16,8,11,2	menu	キャラクター	Character
+menu_regular	menu_bg2	6,13,10,2	menu	レギュラー	Regular
+menu_special	menu_bg2	17,13,9,2	menu	特集	Special
+menu_pro	menu_bg2	5,18,12,2	menu	プロフェッショナル	Professional
+menu_extra	menu_bg2	17,18,9,2	menu	エクストラ	Extra
+menu_tab_entry	menu_bg2	26,13,2,5	tab_green	応★募	PRIZE
+menu_tab_bonus	menu_bg2	26,18,2,5	tab_pink	巻★末	BONUS
+title_tag1	title_bg1	4,20,24,1	title_small	えっ!? あのピクロスが…!	WHAT!? PICROSS IS BACK...!
+title_tag2	title_bg1	2,21,28,2	title_big	期待のシリーズ 第二弾登場!	Part 2 of the series is here!
+footer_l1	footer_bg2	1,20,24,2	footer	ピクロスNP、この後Vol.8まで	More Picross NP is coming,
+footer_l2	footer_bg2	1,22,24,2	footer	ぞくぞく登場!こうご期待!!	up to Vol.8! Stay tuned!!
+prize_addr	prize_bg1	7,7,11,6	card	京都市東山郵便局 / 私書箱15号 / 任天堂株式会社	Nintendo Co., Ltd.\nP.O. Box 15\nHigashiyama P.O.\nKyoto, Japan
+prize_dept	prize_bg1	13,16,5,3	card	係	Dept.
+prize_deadline	prize_bg1	20,5,6,13	deadline	締切 99年7月10日	Ends\nJuly 10\n1999

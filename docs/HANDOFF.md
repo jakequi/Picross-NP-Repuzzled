@@ -20,8 +20,8 @@ Read this first when resuming on a new machine or in a new session.
 ## Status
 | Volume | State |
 |---|---|
-| Vol. 1 | Released v1.1 (issues #1, #2 fixed). Build is byte-identical through `npbuild.py`. |
-| Vol. 2 | In progress (WIP pushed). ROM CRC32 `1DF8A75C`. Done: `vol2/volume.py` (all addresses), `script/tutorial.tsv` (94/97 lines reused from Vol. 1, 3 new translated), `script/puzzle_names.tsv` (all 122, checked against pictures). To do: copy/adapt the remaining `vol1/script` files (help lines differ: blob 027A73; prize text deadline is 7/10; labels/title tagline line 2 is new 第二弾登場!; credits may differ), `script/sprites.py` with frames remapped (+1 from ~110, +2 from 583; sheets: game 035C4A, badges 0374BB, menu 026688, psel 02CACC, bonus 048EE9) and two NEW frames: 319 = in-game 'Ready? / Start / Use a hint / Cancel', 125 = Versus round picker (Versus / How many rounds? / 1-3 rounds / Cancel). Then build, screenshot-check every screen, release v1.0. |
+| Vol. 1 | Complete. Credits page 0 word fixed to "Staff" in release v1.2. |
+| Vol. 2 | Complete (release v1.2). `vol2/script/sprites.py` loads Vol. 1's spec and renumbers frames (<125 same, 125–317 +1, ≥318 +2); new frames 319 (Ready? window) and 125 (Versus round picker, `CUSTOM_PANELS`). All screens checked in Mesen. |
 | Vol. 3–8 | Not started. |
 
 ## Rules learned the hard way
@@ -30,4 +30,7 @@ Read this first when resuming on a new machine or in a new session.
   screen its frame appears on.
 * Long-pointer pattern matches are only trusted inside banks C0–C1.
 * Never commit ROMs or ROM-derived binaries; screenshots for the README live on the `screenshots` branch.
-* Releases: GitHub release per volume version with the `.bps` only.
+* Releases: one project-wide version number (v1.1, v1.2, …). Every release contains the current `.bps` of every
+  finished volume, and nothing else. Patch file names carry no version ("Picross NP Vol. N (English).bps").
+* Frames from different sprite sheets share tile numbers: exclude other-sheet frames (`NOT_GAME_FRAMES`) when
+  counting tile users, and only reclaim tiles of entries actually removed from a frame.
