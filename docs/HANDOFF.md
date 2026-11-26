@@ -20,8 +20,8 @@ Read this first when resuming on a new machine or in a new session.
 ## Status
 | Volume | State |
 |---|---|
-| Vol. 1 | Complete. Credits page 0 word fixed to "Staff" in release v1.2. |
-| Vol. 2 | Complete (release v1.2). `vol2/script/sprites.py` loads Vol. 1's spec and renumbers frames (<125 same, 125–317 +1, ≥318 +2); new frames 319 (Ready? window) and 125 (Versus round picker, `CUSTOM_PANELS`). All screens checked in Mesen. |
+| Vol. 1 | Complete (latest release v1.3: all 30 certificate titles translated, Poké Doll). |
+| Vol. 2 | Complete (first in v1.2; v1.3 adds the 30 certificate titles, Rotary Phone, Baby Bowser). `vol2/script/sprites.py` loads Vol. 1's spec and renumbers frames (<125 same, 125–317 +1, ≥318 +2); new frames 319 (Ready? window) and 125 (Versus round picker, `CUSTOM_PANELS`). All screens checked in Mesen. |
 | Vol. 3–8 | Not started. |
 
 ## Rules learned the hard way
@@ -31,6 +31,6 @@ Read this first when resuming on a new machine or in a new session.
 * Long-pointer pattern matches are only trusted inside banks C0–C1.
 * Never commit ROMs or ROM-derived binaries; screenshots for the README live on the `screenshots` branch.
 * Releases: one project-wide version number (v1.1, v1.2, …). Every release contains the current `.bps` of every
-  finished volume, and nothing else. Patch file names carry no version ("Picross NP Vol. N (English).bps").
+  finished volume, and nothing else. Patch file names carry no version: `Picross_NP_VolN_English.bps` (underscores, RHDN-style).
 * Frames from different sprite sheets share tile numbers: exclude other-sheet frames (`NOT_GAME_FRAMES`) when
   counting tile users, and only reclaim tiles of entries actually removed from a frame.

@@ -6,8 +6,8 @@ included in this repository.
 
 | Volume | Status | Patch |
 |---|---|---|
-| Picross NP Vol. 1 | ✅ Complete | [`patches/Picross NP Vol. 1 (English).bps`](patches/) |
-| Picross NP Vol. 2 | ✅ Complete | [`patches/Picross NP Vol. 2 (English).bps`](patches/) |
+| Picross NP Vol. 1 | ✅ Complete | [`patches/Picross_NP_Vol1_English.bps`](patches/) |
+| Picross NP Vol. 2 | ✅ Complete | [`patches/Picross_NP_Vol2_English.bps`](patches/) |
 | Picross NP Vol. 3 | Planned | — |
 | Picross NP Vol. 4 | Planned | — |
 | Picross NP Vol. 5 | Planned | — |
@@ -40,12 +40,12 @@ Use any BPS patcher (e.g. [Floating IPS](https://www.smwcentral.net/?p=section&a
 **Vol. 1** — source ROM (No-Intro): `Picross NP Vol. 1 (Japan) (Rev 1) (NP).sfc`
 * size 1,048,576 bytes, no copier header
 * CRC32 `E6F29429`, SHA-1 `75b2b639e73775f1709059a8b1b63f61983de0e8`
-* patched result: CRC32 `08BB00DE`, SHA-1 `24b5337adb4a977e85c0a09f6803bd0babb667a5`
+* patched result: CRC32 `631BE964`, SHA-1 `1e27a01a6e47111ce3ed40de2ca0416f25d5d0c6`
 
 **Vol. 2** — source ROM (No-Intro): `Picross NP Vol. 2 (Japan) (Rev 1) (NP).sfc`
 * size 1,048,576 bytes, no copier header
 * CRC32 `1DF8A75C`, SHA-1 `dbad4ed4f1c4bb54bf44223833c056179c4cc4f2`
-* patched result: CRC32 `5D7A2A7A`, SHA-1 `9de5643dfd21ecb33ad5af7a3843d47cb3500854`
+* patched result: CRC32 `ED039641`, SHA-1 `7513dcdaca7b72c8f6e280e97b82bb4f438876ca`
 
 Releases are numbered for the whole project: each GitHub release contains the current patch for every
 finished volume.
