@@ -19,16 +19,16 @@ included in this repository.
 
 <table>
 <tr>
-<td><img src="https://github.com/jakequi/Picross-NP-Repuzzled/releases/download/v1.1/screenshot-0-title.png" width="384" alt="Title screen"></td>
-<td><img src="https://github.com/jakequi/Picross-NP-Repuzzled/releases/download/v1.1/screenshot-1-main-menu.png" width="384" alt="Main menu"></td>
+<td><img src="https://raw.githubusercontent.com/jakequi/Picross-NP-Repuzzled/screenshots/vol1/0-title.png" width="384" alt="Title screen"></td>
+<td><img src="https://raw.githubusercontent.com/jakequi/Picross-NP-Repuzzled/screenshots/vol1/1-main-menu.png" width="384" alt="Main menu"></td>
 </tr>
 <tr>
-<td><img src="https://github.com/jakequi/Picross-NP-Repuzzled/releases/download/v1.1/screenshot-2-tutorial.png" width="384" alt="How to Play tutorial"></td>
-<td><img src="https://github.com/jakequi/Picross-NP-Repuzzled/releases/download/v1.1/screenshot-3-in-game.png" width="384" alt="In-game hint window"></td>
+<td><img src="https://raw.githubusercontent.com/jakequi/Picross-NP-Repuzzled/screenshots/vol1/2-tutorial.png" width="384" alt="How to Play tutorial"></td>
+<td><img src="https://raw.githubusercontent.com/jakequi/Picross-NP-Repuzzled/screenshots/vol1/3-in-game.png" width="384" alt="In-game hint window"></td>
 </tr>
 <tr>
-<td><img src="https://github.com/jakequi/Picross-NP-Repuzzled/releases/download/v1.1/screenshot-5-puzzle-clear.png" width="384" alt="Puzzle clear"></td>
-<td><img src="https://github.com/jakequi/Picross-NP-Repuzzled/releases/download/v1.1/screenshot-4-special-landmark.png" width="384" alt="Special mode landmark description"></td>
+<td><img src="https://raw.githubusercontent.com/jakequi/Picross-NP-Repuzzled/screenshots/vol1/5-puzzle-clear.png" width="384" alt="Puzzle clear"></td>
+<td><img src="https://raw.githubusercontent.com/jakequi/Picross-NP-Repuzzled/screenshots/vol1/4-special-landmark.png" width="384" alt="Special mode landmark description"></td>
 </tr>
 </table>
 
