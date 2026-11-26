@@ -1,6 +1,33 @@
-# Bonus certificate rank titles (map cells in blob C4:8044, offsets table C1:5084; chosen by C1:5014 from play stats).
-0	ピクロス神	Picross God
-1	ピクロスキング	Picross King
-2	ピクロス名人	Picross Expert
-3	ピクロスチャンピオ	Picross Champion
-4	ピクロスマスター	Picross Master
+# Certificate rank titles: 16x2 map cells in blob C4:8044, one per 0x80-byte row. Columns: row, Japanese, English (max 16 chars).
+# Rows 0-24: mode-clear certificates, 5 tiers per mode (chosen from play stats by C1:5014).
+# Rows 25-29: whole-volume certificate (offsets table C1:5084).
+0	ピクロス天使	Picross Angel
+1	ピクロスマン	Picross Man
+2	ピクロサー	Picrosser
+3	ピクロス人	Picrossian
+4	ピクロスさん	Mr. Picross
+5	ピクロスキラー	Picross Killer
+6	ピクロス番長	Picross Big Boss
+7	ピクロス戦士	Picross Warrior
+8	ピクロスバカ一代	Picross Fanatic
+9	ピクロス星人	Picross Alien
+10	ピクロスヒーロー	Picross Hero
+11	ピクロス侍	Picross Samurai
+12	ピクロス刑事	Picross Sleuth
+13	ピクロス騎士	Picross Knight
+14	ピクロス仮面	Masked Picross
+15	ピクロス博士	Picross Scholar
+16	ピクロス先生	Picross Sensei
+17	ピクロス導師	Picross Guru
+18	Dr.ピクロス	Dr. Picross
+19	ピクロス大臣	Picross Minister
+20	聖ピクロス	Saint Picross
+21	ピクロスの鬼	Picross Demon
+22	ピクロス仙人	Picross Sage
+23	ピクロス魔神	Picross Overlord
+24	ピクロス大将	Picross General
+25	ピクロス神	Picross God
+26	ピクロスキング	Picross King
+27	ピクロス名人	Picross Expert
+28	ピクロスチャンピオ	Picross Champion
+29	ピクロスマスター	Picross Master

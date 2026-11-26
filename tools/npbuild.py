@@ -679,8 +679,11 @@ def credit_pages(rom, cache):
         if line.strip() and not line.startswith('#'):
             k, jp, en = line.rstrip('\n').split('\t'); titles[int(k)] = en
     m = cache.get(V.RANK_MAP_BLOB)
+    # keys are rows of the blob (0x80 bytes each); the C1 table points at rows 25-29 (volume certificate)
+    table_rows = {struct.unpack_from('<H', rom.orig, V.RANK_TABLE + 2 * k)[0] // 0x80 for k in range(5)}
+    assert table_rows <= set(titles), 'ranks.tsv misses a volume-certificate row'
     for k, en in titles.items():
-        o = struct.unpack_from('<H', rom.orig, V.RANK_TABLE + 2 * k)[0]
+        o = k * 0x80
         assert len(en) <= 16
         start = (16 - len(en)) // 2
         cells = font.cells(en)
