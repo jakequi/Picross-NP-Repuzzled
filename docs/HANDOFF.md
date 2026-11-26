@@ -21,7 +21,7 @@ Read this first when resuming on a new machine or in a new session.
 | Volume | State |
 |---|---|
 | Vol. 1 | Released v1.1 (issues #1, #2 fixed). Build is byte-identical through `npbuild.py`. |
-| Vol. 2 | In progress. ROM: CRC32 `1DF8A75C`. Survey: same engine; moved: metasprite table `0A59B0`, size table `0A6B14`, credit pages `04B094`. 42 of Vol. 1's 54 blobs are identical (relocated); changed: title, help lines, menu sheet, credits/cert fonts, prize screen. |
+| Vol. 2 | In progress (WIP pushed). ROM CRC32 `1DF8A75C`. Done: `vol2/volume.py` (all addresses), `script/tutorial.tsv` (94/97 lines reused from Vol. 1, 3 new translated), `script/puzzle_names.tsv` (all 122, checked against pictures). To do: copy/adapt the remaining `vol1/script` files (help lines differ: blob 027A73; prize text deadline is 7/10; labels/title tagline line 2 is new 第二弾登場!; credits may differ), `script/sprites.py` with frames remapped (+1 from ~110, +2 from 583; sheets: game 035C4A, badges 0374BB, menu 026688, psel 02CACC, bonus 048EE9) and two NEW frames: 319 = in-game 'Ready? / Start / Use a hint / Cancel', 125 = Versus round picker (Versus / How many rounds? / 1-3 rounds / Cancel). Then build, screenshot-check every screen, release v1.0. |
 | Vol. 3–8 | Not started. |
 
 ## Rules learned the hard way

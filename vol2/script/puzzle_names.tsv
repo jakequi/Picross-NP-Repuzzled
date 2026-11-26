@@ -1,0 +1,124 @@
+# Puzzle names (VWF text in each puzzle record). Columns: index, Japanese, English. Checked against solution images (tools/puzzle_sheet.py).
+# Character mode (26-37): Mario-series characters; official English names where known (イソズキン has none -> descriptive).
+0	マリオのスーパーピクロス	Mario's Super Picross
+1	アルファベットの「Ｎ」	The Letter N
+2	ガーデニング	Gardening
+3	プードル	Poodle
+4	うきわ	Swim Ring
+5	ペットボトル	Plastic Bottle
+6	しゅうさいくん	Whiz Kid
+7	ハンドミキサー	Hand Mixer
+8	ふうしゃごや	Windmill
+9	さそり	Scorpion
+10	サキソフォン	Saxophone
+11	うわざらてんびん	Balance Scale
+12	せきとり	Sumo Wrestler
+13	チーター	Cheetah
+14	ヘリコプター	Helicopter
+15	ひこうき	Airplane
+16	しか	Deer
+17	きつね	Fox
+18	すず	Bell
+19	マーカー	Marker
+20	でんきスタンド	Desk Lamp
+21	ふうりん	Wind Chime
+22	せんたくき	Washing Machine
+23	トラック	Truck
+24	かに	Crab
+25	ぎょくざ	Throne
+26	パックン	Piranha Plant
+27	プクプク	Cheep Cheep
+28	ポチ	Poochy
+29	タマゴ	Yoshi's Egg
+30	クラゲボン	Jellyfish
+31	ワープちゃん	Miss Warp
+32	ヨッシー	Yoshi
+33	ヘイホー	Shy Guy
+34	イソズキン	Sea Anemone
+35	ウンババ	Blargg
+36	テレサ	Boo
+37	コクッパ	Koopaling
+38	こうもり	Bat
+39	おさる	Monkey
+40	ワイシャツ	Dress Shirt
+41	はくとうわし	Bald Eagle
+42	ぞう	Elephant
+43	くろでんわ	Black Telephone
+44	とり	Bird
+45	まねきねこ	Lucky Cat
+46	がくしゅうづくえ	Study Desk
+47	ちょう	Butterfly
+48	しゃちほこ	Shachihoko
+49	そうじのバケツ	Cleaning Bucket
+50	くじら	Whale
+51	みそしる	Miso Soup
+52	ジョッキー	Jockey
+53	ぎょうざ	Gyoza
+54	たぬきのおきもの	Tanuki Statue
+55	ポット＆カップ	Teapot & Cup
+56	う	Cormorant
+57	ＰＨＳ	PHS Phone
+58	ロボット	Robot
+59	さむらい	Samurai
+60	めざましどけい	Alarm Clock
+61	イチゴ	Strawberry
+62	ゴリラ	Gorilla
+63	やきざかな	Grilled Fish
+64	おぼうさん	Monk
+65	うなぎ	Eel
+66	やきとり	Yakitori
+67	カンガルー	Kangaroo
+68	いぬ	Dog
+69	とらねこ	Tabby Cat
+70	はと	Pigeon
+71	ブタのコックさん	Pig Chef
+72	やっこだこ	Yakko Kite
+73	プリン	Pudding
+74	ふんころがし	Dung Beetle
+75	サイフォン	Coffee Siphon
+76	まど	Window
+77	ハンバーガー	Hamburger
+78	せんめんだい	Washstand
+79	ほろばしゃ	Covered Wagon
+80	じゅうりょうあげ	Weightlifting
+81	ひめくりカレンダー	Tear-off Calendar
+82	やかん	Kettle
+83	ぼんさい	Bonsai
+84	バイオリン	Violin
+85	てんにょ	Celestial Maiden
+86	たつまき	Tornado
+87	まじょ	Witch
+88	かかし	Scarecrow
+89	きこり	Woodcutter
+90	ライオン	Lion
+91	おはなばたけ	Flower Field
+92	きゅうでん	Palace
+93	いぬ	Puppy
+94	めがね	Glasses
+95	ききゅう	Hot-Air Balloon
+96	くつ	Shoes
+97	ミュージカル	Musical
+98	えま	Ema Plaque
+99	いぬのさんぽ	Dog Walk
+100	かぶ	Turnip
+101	えいせいアンテナ	Satellite Dish
+102	かみなりさま	Thunder God
+103	かぐやひめ	Princess Kaguya
+104	にんぎょひめ	Little Mermaid
+105	てんぷらうどん	Tempura Udon
+106	かさじぞう	Kasa Jizo
+107	かわせみ	Kingfisher
+108	ランプのせい	Lamp Genie
+109	そらとぶじゅうたん	Flying Carpet
+110	アシカ	Sea Lion
+111	おいしゃさん	Doctor
+112	たまてばこ	Treasure Box
+113	はち	Bee
+114	ぎょうじ	Sumo Referee
+115	うらしまたろう	Urashima Taro
+116	ふぐちょうちん	Pufferfish Lantern
+117	やまたのおろち	Yamata no Orochi
+118	いなばのしろうさぎ	White Hare of Inaba
+119	きぼりぐま	Carved Bear
+120	はとぐるま	Pigeon Toy
+121	あかべこ	Akabeko
