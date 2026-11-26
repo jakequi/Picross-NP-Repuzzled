@@ -41,11 +41,14 @@ def encode(text):
     return bytes(out)
 
 
+SJIS_ROWS = 0x2695   # Shift-JIS row table in bank C0 (Vol. 4: 0x2691; set from volume.py)
+
+
 def glyph_index(rom, code):
     """Glyph number the game uses for a Shift-JIS code (mirrors C0:2646)."""
     lead, trail = code >> 8, code & 0xFF
-    rows = struct.unpack_from('<3H', rom, 0x2695)
-    v = struct.unpack_from('<H', rom, 0x269B + rows[lead - 0x81] + (trail - 0x40) * 2)[0]
+    rows = struct.unpack_from('<3H', rom, SJIS_ROWS)
+    v = struct.unpack_from('<H', rom, SJIS_ROWS + 6 + rows[lead - 0x81] + (trail - 0x40) * 2)[0]
     return v + 0x9C
 
 

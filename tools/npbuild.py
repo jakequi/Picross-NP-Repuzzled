@@ -727,6 +727,7 @@ def configure(volume_dir):
     tutorial.BASE = V.TUT_BASE
     credits_mod.TABLE = V.CREDIT_TABLE
     vwf.TABLE, vwf.BASE_ADD = V.VWF_TABLE, V.VWF_BASE_ADD
+    vwf_en.SJIS_ROWS = getattr(V, "SJIS_ROWS", 0x2695)
     return V
 
 

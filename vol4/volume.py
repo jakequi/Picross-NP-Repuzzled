@@ -1,0 +1,61 @@
+"""Picross NP Vol. 4 — addresses and settings for tools/npbuild.py (ROM offsets, HiROM: bank C0 = 0x000000).
+Derived with tools/survey.py and by matching Vol. 1's blobs/frames by content (most are identical, relocated)."""
+
+ROM_NAME = 'Picross NP Vol. 4 (Japan) (Rev 1) (NP).sfc'
+ROM_CRC32 = 0x696778FA
+OUT_NAME = 'Picross NP Vol. 4 (English).sfc'
+
+# free space (0xFF in the original); Vol. 2 uses 0x080000-0x09FFFF itself
+FREE = [(0x0C2100, 0x0E0000), (0x0A8240, 0x0B0000), (0x03CA20, 0x040000), (0x05DEC0, 0x060000), (0x04B940, 0x050000)]
+
+# engine (same code as Vol. 1 unless noted)
+LZ_JSL = bytes([0x22, 0x8E, 0x19, 0xC0])                # decompressor moved to C0:198E
+VWF_TABLE, VWF_BASE_ADD = 0x050000, 0x954
+KANJI_LIST = 0x002A57
+SJIS_ROWS = 0x002691                               # moved (C0 code shifted by -4)
+METASPRITE_TABLE = 0x0A5A74                        # moved
+PUZZLE_DB, PUZZLE_SIZE_TBL, PUZZLE_BLOCK_TBL = 0x0B0000, 0x0A6BDC, 0x00714F
+PUZZLE_DB_END = 0x0C2055
+
+TUT_BASE = 0x011682
+TUT_NEW_BASE = 0x016000
+TUT_ADC_SITE = 0x010B26
+C1_BANK_END = 0x020000
+FEATURE_PTRS = None                                # no Special-mode landmark notes (as Vol. 2)
+PRIZE_PTRS = (0x014446, 6)
+SAVE_WARN_PEA = [(0, 0x4050), (1, 0x40AF)]
+
+HELP_BLOB = 0x027D1C
+CLEAR_STAMP_CHR = 0x0259BA
+GFX_LAYERS = {
+    'menu_bg2': (0x0292AD, 0x0259BA, 4),
+    'title_bg1': (0x023DA1, 0x020C6B, 4),
+    'cert_bg1': (0x049D49, 0x044D17, 4, 0x000),
+    'cert_bg1b': (0x049D49, 0x044D17, 4, 0x800),
+    'bonus_bg2a': (0x04A3B9, 0x044D17, 4, 0x000),
+    'footer_bg2': (0x04A3B9, 0x044D17, 4, 0x800),
+    'prize_bg1': (0x0443C7, 0x042C16, 4),
+}
+LABEL_STYLES = {
+    'menu': dict(fill=1, outline=3, font='arialbd.ttf', size=12),
+    'header': dict(fill=4, outline=0xB, font='arialbd.ttf', size=13, keep_rows=(13, 16), y_off=1),
+    'title_small': dict(fill=0xF, outline=None, pixel=True),
+    'title_big': dict(fill=1, outline=None, font='arialbd.ttf', size=14),
+    'tab_green': dict(fill=5, outline=None, font='arialbd.ttf', size=8, panel=9, vertical=True),
+    'tab_pink': dict(fill=5, outline=None, font='arialbd.ttf', size=8, panel=0xE, vertical=True),
+    'cert': dict(fill=4, outline=None, font='arialbd.ttf', size=12, bg=3, blank=0x0BF),
+    'footer': dict(fill=3, outline=6, font='arialbd.ttf', size=11),
+    'card': dict(fill=3, outline=None, font='ARIALNB.TTF', size=12, bg=7, blank=0x50),
+    'deadline': dict(fill=0xB, outline=7, font='arialbd.ttf', size=11, blank=0x20),
+}
+
+CERT_CHR = 0x044D17
+CERT_MAPS = {'full': 0x049D49, 'template': 0x04A8C7}
+CERT_OTHER = [(0x049D49, 0x800), (0x04A3B9, 0x000), (0x04A3B9, 0x800)]
+CERT_BLANK = 0x0BF
+CREDIT_FONT_BLOB = 0x04761E
+CREDIT_TABLE = 0x04B0E6
+CREDIT_ATTR = {'T': 1, 'N': 5}
+CREDIT_CENTRE = 41
+RANK_MAP_BLOB = 0x04AD09
+RANK_TABLE = 0x014FB8

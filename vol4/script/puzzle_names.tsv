@@ -1,124 +1,124 @@
 # Puzzle names (VWF text in each puzzle record). Columns: index, Japanese, English. Checked against solution images.
-# Character mode (26-37): Kirby characters, official English names. Special mode (86-94) hides the keyword 雲 (cloud): あま/かさ/うき... are cloud types; names follow the pictures.
+# Character mode (26-37): Star Fox 64, official English names. Special mode (86-97): Tale of Genji theme (chapter titles / Murasaki Shikibu); names follow the pictures.
 0	かんせい！	Complete!
 1	アルファベットの「Ｎ」	The Letter N
-2	もくぎょ	Wooden Fish Drum
-3	パンジー	Pansy
-4	パンとバター	Bread & Butter
-5	ごみばこ	Trash Can
-6	スクーター	Scooter
-7	くま	Bear
-8	パレット	Palette
-9	ちきゅう	Earth
-10	げた	Geta Sandals
-11	ぎゅうにゅうびん	Milk Bottle
-12	ホッチキス	Stapler
-13	アメフト	American Football
-14	ハイヒール	High Heels
-15	ねったいぎょ	Tropical Fish
-16	かたつむり	Snail
-17	ＵＦＯ	UFO
-18	たっきゅう	Table Tennis
-19	ライター	Lighter
-20	ヘッドフォン	Headphones
-21	なすび	Eggplant
-22	じっけんちゅう！	Experimenting!
-23	プリンター	Printer
-24	カメラ	Camera
-25	まきもの	Scroll
-26	ロッキー	Rocky
-27	ウォーキー	Walky
-28	ゴルドー	Gordo
-29	ワドルドゥ	Waddle Doo
-30	サーキブル	Sir Kibble
-31	ポピーブロスＪｒ．	Poppy Bros. Jr.
-32	カービィ	Kirby
-33	チリー	Chilly
-34	ジュキッド	Jukid
-35	Ｍｒ．フロスティ	Mr. Frosty
-36	デデデだいおう	King Dedede
-37	メタナイト	Meta Knight
-38	アーチェリー	Archery
-39	ダーツ	Darts
-40	めだまやき	Fried Egg
-41	はかり	Scales
-42	ちょうちん	Paper Lantern
-43	かぶき	Kabuki
-44	わなげ	Ring Toss
-45	けんだま	Kendama
-46	ドラゴン	Dragon
-47	どくしょ	Reading
-48	すりばち	Mortar & Pestle
-49	はちうえ	Potted Plant
-50	しりょくけんさ	Eye Test
-51	パンダ	Panda
-52	ディレクターズチェア	Director's Chair
-53	なまけもの	Sloth
-54	しろむく	Bridal Kimono
-55	かびん	Vase
-56	もくば	Rocking Horse
-57	じゃぐち	Faucet
-58	ポスト	Postbox
-59	ようしきトイレ	Western Toilet
-60	アロマテラピー	Aromatherapy
-61	ロンドンブーツ	Platform Boots
-62	けいとだま	Ball of Yarn
-63	ぜんまいネズミ	Wind-up Mouse
-64	けむし	Caterpillar
-65	ミサゴ	Osprey
-66	チーズ	Cheese
-67	テリア	Terrier
-68	コーヒー	Coffee
-69	マジック	Magic Trick
-70	スプーンまげ	Spoon Bending
-71	アリ	Ant
-72	ザリガニ	Crayfish
-73	まつばづえとギブス	Crutches & Cast
-74	たいじゅうけい	Bathroom Scale
-75	うちわ	Paper Fan
-76	おまる	Potty
-77	おたふく	Otafuku Mask
-78	ペガサス	Pegasus
-79	ダイナマイト	Dynamite
-80	サッカーボール	Soccer Ball
-81	むしとりあみ	Bug Net
-82	ボブスレー	Bobsleigh
-83	パイプ	Pipe
-84	おなべ	Cooking Pot
-85	ゆうえんちのひこうき	Kiddie Plane Ride
-86	あま	Ama Diver
-87	かさ	Umbrella
-88	うき	Fishing Float
-89	ゆき	Snow
-90	いわし	Sardines
-91	うろこ	Fish Scales
-92	ゆうやけ	Sunset
-93	にゅうどう	Giant Monk
-94	かみなり	Thunder
-95	ひつじ	Sheep
-96	ひこうき	Airplane
-97	そんごくう	Sun Wukong
-98	ぼうえんきょう	Telescope
-99	かざんのふんか	Erupting Volcano
-100	ペリカン	Pelican
-101	サイ	Rhinoceros
-102	へびつかい	Snake Charmer
-103	じょうるり	Joruri Puppets
-104	たいぐるま	Sea Bream Toy
-105	ヘリコプター	Helicopter
-106	ミイラおとこ	Mummy
-107	カレーライス	Curry Rice
-108	バッファロー	Buffalo
-109	ペンギン	Penguin
-110	テニスのラケット	Tennis Racket
-111	のうめん	Noh Mask
-112	ボタンインコ	Lovebird
-113	パラグライダー	Paragliding
-114	えんばんなげ	Discus Throw
-115	きじ	Pheasant
-116	オオルリ	Blue Flycatcher
-117	たんちょう	Red-crowned Crane
-118	スノーモービル	Snowmobile
-119	いっとうぼり	Ittobori Carving
-120	セイウチ	Walrus
-121	ぞうがめ	Giant Tortoise
+2	ハンガー	Hanger
+3	たてごと	Harp
+4	でんしゃ	Train
+5	クリップ	Paper Clip
+6	かかし	Scarecrow
+7	ひょうしょうじょう	Certificate
+8	スリッパ	Slippers
+9	ぺんぎん	Penguin
+10	オオハシ	Toucan
+11	ライオン	Lion
+12	ポロシャツ	Polo Shirt
+13	みつばち	Honeybee
+14	はかり	Scales
+15	アンテナ	Antenna
+16	へび	Snake
+17	めがね	Glasses
+18	なんきんじょう	Padlock
+19	こま	Spinning Top
+20	ひなどり	Chick
+21	バトミントンのはね	Shuttlecock
+22	ロケット	Rocket
+23	ティッシュペーパー	Tissues
+24	ランドセル	School Satchel
+25	おけ	Wooden Tub
+26	スリッピー・トード	Slippy Toad
+27	ピグマ・デンガー	Pigma Dengar
+28	フォックス・マクラウド	Fox McCloud
+29	アンドリュー・オイッコニー	Andrew Oikonny
+30	ウルフ・オドネル	Wolf O'Donnell
+31	ファルコ・ランバルディ	Falco Lombardi
+32	レオン・ポワルスキー	Leon Powalski
+33	ペッピー・ヘア	Peppy Hare
+34	ランドマスター	Landmaster
+35	アーウィン	Arwing
+36	グレートフォックス	Great Fox
+37	Ｄｒ．アンドルフ	Andross
+38	ベニテングダケ	Fly Agaric
+39	カステラ	Castella Cake
+40	けんじゅう	Pistol
+41	ドラキュラのかんおけ	Dracula's Coffin
+42	さく	Fence
+43	がまぐち	Coin Purse
+44	トランプ	Playing Cards
+45	コアラ	Koala
+46	すべりだい	Slide
+47	ポケットナイフ	Pocketknife
+48	にくまん	Pork Bun
+49	ふぐ	Pufferfish
+50	インラインスケート	Inline Skates
+51	りす	Squirrel
+52	キーホルダー	Keychain
+53	スパゲッティ	Spaghetti
+54	トランペット	Trumpet
+55	つるぎ	Sword
+56	くろひょう	Black Panther
+57	てんびん	Balance Scale
+58	ペンキとローラー	Paint & Roller
+59	カップケーキ	Cupcake
+60	こぶた	Piglet
+61	たんぽぽ	Dandelion
+62	ドレッサー	Dresser
+63	ドライヤー	Hair Dryer
+64	スプレーボトル	Spray Bottle
+65	くうちゅうブランコ	Trapeze
+66	たぬき	Tanuki
+67	てんし	Angel
+68	たっきゅうびん	Parcel Delivery
+69	ニホンザル	Japanese Macaque
+70	しか	Deer
+71	ぼんさい	Bonsai
+72	くわ	Hoe
+73	こうしゅうでんわ	Payphone
+74	とっくり	Sake Bottle
+75	マッシュルーム	Mushroom
+76	ミルクピッチャー	Milk Jug
+77	うばぐるま	Baby Carriage
+78	あかちゃん	Baby
+79	やまゆり	Mountain Lily
+80	ルアー	Fishing Lure
+81	ユニコーン	Unicorn
+82	バッター	Batter
+83	すもう	Sumo
+84	こうじげんば	Construction Site
+85	はかせ	Professor
+86	あさがお	Morning Glory
+87	ほたる	Firefly
+88	かがりび	Bonfire
+89	あかし	Akashi
+90	ふじつぼ	Barnacles
+91	とこなつ	Endless Summer
+92	かげろう	Mayfly
+93	よこぶえ	Bamboo Flute
+94	こうばい	Red Plum
+95	あおい	Hollyhock Crest
+96	えまき	Picture Scroll
+97	むらさきしきぶ	Murasaki Shikibu
+98	とびうお	Flying Fish
+99	キツツキ	Woodpecker
+100	さやえんどう	Snow Peas
+101	ＣＤ	CD
+102	ビックリばこ	Jack-in-the-Box
+103	たいこ	Taiko Drum
+104	バスケットボール	Basketball
+105	うめ	Plum Blossom
+106	てっこうしょのしごと	Steelworker
+107	トラクター	Tractor
+108	さらまわし	Plate Spinning
+109	みにくいアヒルのこ	The Ugly Duckling
+110	ウインドサーフィン	Windsurfing
+111	うちでのこづち	Magic Mallet
+112	シンバル	Cymbals
+113	ひょっとこ	Hyottoko Mask
+114	かぎ	Key
+115	ケンタウロス	Centaur
+116	しちめんちょう	Turkey
+117	ひばり	Skylark
+118	マナティ	Manatee
+119	バレエ	Ballet
+120	うみがめ	Sea Turtle
+121	ドラゴン	Dragon
