@@ -1,0 +1,123 @@
+# Puzzle names (VWF text in each puzzle record). Columns: index, Japanese, English. Checked against solution images (tools/puzzle_sheet.py).
+0	かんせい！	Complete!
+1	アルファベットの「Ｎ」	The Letter N
+2	でんどうドリル	Power Drill
+3	びっくりばこ	Jack-in-the-Box
+4	ビートばん	Kickboard
+5	ボウリング	Bowling
+6	ベビーカー	Stroller
+7	いかり	Anchor
+8	きびだんご	Kibi Dango
+9	ゆびにんぎょう	Finger Puppet
+10	きのこ	Mushroom
+11	ユニコーン	Unicorn
+12	グローブ	Baseball Glove
+13	ナイフ	Pocketknife
+14	きょうりゅう	Dinosaur
+15	いぬ	Dog
+16	かざぐるま	Pinwheel
+17	ランナー	Runner
+18	ブレザー	Blazer
+19	がくせいかばん	School Bag
+20	たんす	Dresser
+21	ヘルメット	Helmet
+22	ミルクパック	Milk Carton
+23	すなどけい	Hourglass
+24	まんねんひつ	Fountain Pen
+25	しろヘビ	White Snake
+26	ニャース	Meowth
+27	バリヤード	Mr. Mime
+28	コダック	Psyduck
+29	ピッピにんぎょう	Clefairy Doll
+30	トゲピー	Togepi
+31	マルマイン	Electrode
+32	クサイハナ	Gloom
+33	ピカチュウ	Pikachu
+34	サンダー	Zapdos
+35	ギャロップ	Rapidash
+36	ニョロモ	Poliwag
+37	カビゴン	Snorlax
+38	こうもりがさ	Umbrella
+39	うみがめ	Sea Turtle
+40	ファックス	Fax Machine
+41	フィルム	Film
+42	い	Stomach
+43	ワイン	Wine
+44	ネッシー	Nessie
+45	アルコールランプ	Alcohol Lamp
+46	くり	Chestnut
+47	いす	Chair
+48	くすり	Medicine
+49	でんたく	Calculator
+50	おにさん	Oni
+51	ワゴンカー	Station Wagon
+52	チキン	Roast Chicken
+53	あらいぐま	Raccoon
+54	せんぷうき	Electric Fan
+55	イエローカード	Yellow Card
+56	シュノーケル	Snorkel
+57	ダンベル	Dumbbell
+58	ミシン	Sewing Machine
+59	えんぴつ	Pencil
+60	ラグビー	Rugby
+61	タクシー	Taxi
+62	てんし	Angel
+63	ヨーヨー	Yo-Yo
+64	ちりとり	Dustpan
+65	さる	Monkey
+66	かもめ	Seagull
+67	ＣＤプレイヤー	CD Player
+68	しょくだい	Candlestick
+69	わんちゃん	Doggy
+70	ベッド	Bed
+71	ロールペーパー	Toilet Paper
+72	ゆうしょうカップ	Trophy
+73	カバ	Hippo
+74	きんぎょ	Goldfish
+75	とぐろヘビ	Coiled Snake
+76	ゾウ	Elephant
+77	りゅう	Dragon
+78	そうがんきょう	Binoculars
+79	サンタ	Santa
+80	もくば	Rocking Horse
+81	はなたば	Bouquet
+82	サンドウィッチ	Sandwich
+83	ピエロ	Clown
+84	かぼちゃ	Pumpkin
+85	ピノキオ	Pinocchio
+86	ほうりゅうじ　ごじゅうのとう	Horyu-ji Pagoda
+87	しゃかさんぞんぞう	Shaka Triad
+88	いつくしまじんじゃ	Itsukushima Shrine
+89	びょうどういんほうおうどう	Byodo-in Phoenix Hall
+90	にんなじ　こんどう	Ninna-ji Kondo
+91	きよみずのぶたい	Kiyomizu Stage
+92	げんばくドーム	Atomic Bomb Dome
+93	りょうあんじ　せきてい	Ryoan-ji Rock Garden
+94	ろくおんじ　きんかく	Kinkaku-ji
+95	ひめじじょう	Himeji Castle
+96	しらかわごう	Shirakawa-go
+97	ひうんかく	Hiunkaku
+98	とびこみ	Diving
+99	ポロ	Polo
+100	アイスホッケー	Ice Hockey
+101	ハードル	Hurdles
+102	レシーブ	Volleyball Dig
+103	けり	Kick
+104	じてんしゃ	Cycling
+105	ホームラン	Home Run
+106	テニス	Tennis
+107	ピッチャー	Pitcher
+108	たかとび	High Jump
+109	ファインセーブ	Great Save
+110	ポット	Teapot
+111	むしめがね	Magnifying Glass
+112	でんきゅう	Light Bulb
+113	クロワッサン	Croissant
+114	やどかり	Hermit Crab
+115	ブタのちょきんばこ	Piggy Bank
+116	トナカイ	Reindeer
+117	カウボーイハット	Cowboy Hat
+118	はいはい	Crawling Baby
+119	じゆうのめがみ	Statue of Liberty
+120	よこづな	Yokozuna
+121	ネプチューン	Neptune
