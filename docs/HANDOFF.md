@@ -65,6 +65,10 @@ Read this first when resuming on a new machine or in a new session.
   RAM (stride 0x24) and presses d-pad/A (3 frames on, 9 off); set `PAD_EMPTY, PAD_FILL = 0x2A, 0x2B` for Vols. 6–8.
 
 ## Rules learned the hard way
+* Issue #5 (fixed in v2.1): Vols. 2–8 keep an attract-demo badge (デモ) in game-sheet tiles 0x80-0x8F, drawn by code,
+  not by a metasprite frame, so frame matching never saw it (`DEMO_BADGE` in vol2/vol3 sprites.py, inherited by 4–8).
+  Root cause: new art added inside an existing sheet. Checks: `tools/sweep.py` (untouched blobs with non-Vol. 1 tiles)
+  plus watching the full attract cycle (title → demo → "Congratulations" → title) of every volume.
 * Small text: always `tools/tinyfont.py` (users flagged mixed fonts as inconsistent).
 * In-game sprite tiles 0x180–0x1FF are streamed during puzzles; verify any "free" tile against live VRAM on every
   screen its frame appears on.

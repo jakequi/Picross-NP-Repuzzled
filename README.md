@@ -45,37 +45,37 @@ Use any BPS patcher (e.g. [Floating IPS](https://www.smwcentral.net/?p=section&a
 **Vol. 2** — source ROM (No-Intro): `Picross NP Vol. 2 (Japan) (Rev 1) (NP).sfc`
 * size 1,048,576 bytes, no copier header
 * CRC32 `1DF8A75C`, SHA-1 `dbad4ed4f1c4bb54bf44223833c056179c4cc4f2`
-* patched result: CRC32 `366B5DB9`, SHA-1 `ee817390a8778ce1c6cc4c1d230477c860e25460`
+* patched result: CRC32 `83B6A4B8`, SHA-1 `29a096c45c49b5c757fd1ff681ce64b5e2a83d5d`
 
 **Vol. 3** — source ROM (No-Intro): `Picross NP Vol. 3 (Japan) (Rev 1) (NP).sfc`
 * size 1,048,576 bytes, no copier header
 * CRC32 `717243E7`, SHA-1 `456d8a187edd2f35731f58656b94fcaf65daae40`
-* patched result: CRC32 `102C3282`, SHA-1 `add9f305b3f9c50aa4086f46d0e8652329ea06bd`
+* patched result: CRC32 `DDFA8C37`, SHA-1 `29eae7dbd4ac75cd1c92b11ae3ce443e43c642e5`
 
 **Vol. 4** — source ROM (No-Intro): `Picross NP Vol. 4 (Japan) (Rev 1) (NP).sfc`
 * size 1,048,576 bytes, no copier header
 * CRC32 `696778FA`, SHA-1 `2239de70d257f0d66d21dddd716d3cc9413523ee`
-* patched result: CRC32 `14A3E8FD`, SHA-1 `6b407df0828acea547f63afb05350cec23efed52`
+* patched result: CRC32 `6814227A`, SHA-1 `735a966401f40cdebde6841abc200127e4312453`
 
 **Vol. 5** — source ROM (No-Intro): `Picross NP Vol. 5 (Japan) (Rev 1) (NP).sfc`
 * size 1,048,576 bytes, no copier header
 * CRC32 `5AC117C9`, SHA-1 `4f7c151ee6d3e0735dbe55d4958942aa9003909c`
-* patched result: CRC32 `B57E6570`, SHA-1 `a73ae1b84527175ec6178785515fd79041160cfa`
+* patched result: CRC32 `AEBFCC73`, SHA-1 `3da7b03c5003a307862cec463156420e78931314`
 
 **Vol. 6** — source ROM (No-Intro): `Picross NP Vol. 6 (Japan) (Rev 1) (NP).sfc`
 * size 1,572,864 bytes, no copier header
 * CRC32 `B1D6A070`, SHA-1 `a13cf604a0667541d7fbb8e139f808dfc83dbb07`
-* patched result: CRC32 `2514B899`, SHA-1 `9a93a032f4c51f652b79ca2f296717de038aa9f3`
+* patched result: CRC32 `D0FDAB84`, SHA-1 `e5498033cdf76dc96ed0fb31b49aba1daeede86e`
 
 **Vol. 7** — source ROM (No-Intro): `Picross NP Vol. 7 (Japan) (Rev 1) (NP).sfc`
 * size 1,572,864 bytes, no copier header
 * CRC32 `2528D5A0`, SHA-1 `8870889c042b21d2a5a1fc2fed4dc8803d829b0b`
-* patched result: CRC32 `1A6F7371`, SHA-1 `2efcfc9d2fb60d4ae1bc323317029e5de092da5d`
+* patched result: CRC32 `D66D613F`, SHA-1 `b9fe9508783f4b6a6ba70683b75660bff66fde94`
 
 **Vol. 8** — source ROM (No-Intro): `Picross NP Vol. 8 (Japan) (Rev 1) (NP).sfc`
 * size 1,572,864 bytes, no copier header
 * CRC32 `2FBEEA6E`, SHA-1 `b34537a0efdae9cf25eab0e3c4f4dd802a98a63b`
-* patched result: CRC32 `076C20E8`, SHA-1 `eac3a6130858132c993e129bfa6736d945add97a`
+* patched result: CRC32 `18B3AA76`, SHA-1 `17d87d6541ec1885515a51d08ff7f5392516a2e5`
 
 Releases are numbered for the whole project: each GitHub release contains the current patch for every
 finished volume.
@@ -139,6 +139,7 @@ Output goes to `volN/out/` (`.sfc`, `.bps`, `.ips`). Translations live in plain-
 ## Credits
 
 * Translation and hacking: jakequi, AI-assisted (Claude)
+* Testing and bug reports: [leoXtls](https://github.com/leoXtls) (issues #4 and #5)
 * Original game: Nintendo / Jupiter, 1995–1999; Pokémon puzzles © Nintendo / Creatures / GAME FREAK
 
 This is an unofficial fan translation, not affiliated with or endorsed by Nintendo.

@@ -55,3 +55,6 @@ CUSTOM_PANELS = [
                 (43, '3 ROUNDS', 1, 7, 0xE, 12, 62, 'left'),
                 (53, 'CANCEL', 1, 7, 0xE, 12, 62, 'left')]),
 ]
+
+# attract-mode demo badge under the clock (デモ), 64x16 at game-sheet tiles 0x80-0x8F (issue #5)
+DEMO_BADGE = (0x080, 'DEMO')

@@ -512,6 +512,14 @@ def sprite_text(rom, cache):
             r, c = divmod(t, 8)
             o = k * 0x200 + t * 32
             badges[o:o + 32] = gfx.encode_tile(img[r * 8:r * 8 + 8, c * 8:c * 8 + 8], 4)
+    demo = getattr(S, 'DEMO_BADGE', None)   # (first tile, text): attract-demo badge kept in the game sheet (Vols. 2+)
+    if demo:
+        t0, text = demo
+        assert any(sheet.get(t0 + t).any() for t in range(16)), 'no demo badge art at tile %x' % t0
+        img = spritetext.badge(text, w=64)
+        for t in range(16):
+            r, c = divmod(t, 8)
+            sheet.put(t0 + t, img[r * 8:r * 8 + 8, c * 8:c * 8 + 8])
     print('  %d pause rows, %d frames, %d badges, %d sheet tiles left' % (
         len(S.PAUSE_ROWS), len(S.FRAMES), len(S.BADGES), len(sheet.free)))
     menu_sprites(rom, cache, S)
