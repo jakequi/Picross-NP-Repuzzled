@@ -29,7 +29,7 @@ def parse(d, off):
     name = bmp + b + c * cnt
     p = name
     while d[p] | d[p + 1] << 8:
-        p += 2
+        p += 2 if d[p] >= 0x81 else 1    # Shift-JIS pairs; Vol. 6+ names also use single bytes (0x2F '/')
     bits = np.unpackbits(np.frombuffer(d[bmp:bmp + a], np.uint8))[:w * h].reshape(h, w)
     return dict(off=off, type=t, w=w, h=h, count=cnt, name_off=name, name_end=p,
                 name_raw=bytes(d[name:p]), solution=bits)

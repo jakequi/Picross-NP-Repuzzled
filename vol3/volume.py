@@ -34,6 +34,7 @@ GFX_LAYERS = {
     'bonus_bg2a': (0x04A3CD, 0x044D1C, 4, 0x000),
     'footer_bg2': (0x04A3CD, 0x044D1C, 4, 0x800),
     'prize_bg1': (0x0443CC, 0x042C13, 4),
+    'cert_tmpl': (0x04A8DB, 0x044D1C, 4),   # not edited: its tiles must not be taken by the footer labels
 }
 LABEL_STYLES = {
     'menu': dict(fill=1, outline=3, font='arialbd.ttf', size=12),

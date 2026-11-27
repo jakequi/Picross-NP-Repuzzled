@@ -1,0 +1,244 @@
+# Puzzle names (VWF text in each puzzle record). Columns: index, Japanese, English. Checked against solution images.
+# Vol. 7 has 242 puzzles: the second 120 are a gift selection from Vols. 1-5 (names reused). Character mode (50-61): Wario Land II; most enemies have no official English name, so MarioWiki/romanised names are used. Special mode (170-181): endangered animals of Japan; names follow the pictures.
+0	かんせい！	Complete!
+1	アルファベットの「Ｎ」	The Letter N
+2	ガソリンスタンド	Gas Station
+3	リール	Fishing Reel
+4	はんせん	Sailing Ship
+5	ボストンバック	Boston Bag
+6	もうどうけん	Guide Dog
+7	チェス	Chess
+8	ほうれんそう	Spinach
+9	トマト	Tomato
+10	ひいらぎ	Holly
+11	ひのまるべんとう	Hinomaru Bento
+12	かもめ	Seagull
+13	つめきり	Nail Clippers
+14	きゅうきゅうばこ	First Aid Kit
+15	パンジー	Pansy
+16	ごみばこ	Trash Can
+17	しゃこがい	Giant Clam
+18	かかし	Scarecrow
+19	でんどうドリル	Power Drill
+20	うきわ	Swim Ring
+21	ボウリング	Bowling
+22	ポロシャツ	Polo Shirt
+23	うわざらてんびん	Balance Scale
+24	きのこ	Mushroom
+25	チーター	Cheetah
+26	ゆびわ	Ring
+27	うでどけい	Wristwatch
+28	たつのおとしご	Seahorse
+29	いえ	House
+30	ねずみ	Mouse
+31	クッキー	Cookie
+32	ごくごく	Gulp Gulp
+33	ティッシュ	Tissues
+34	ヨット	Sailboat
+35	シェーバー	Shaver
+36	よこぶえ	Bamboo Flute
+37	ライオン	Lion
+38	きょうりゅう	Dinosaur
+39	めがね	Glasses
+40	でんわ	Telephone
+41	かたつむり	Snail
+42	どんぐり	Acorn
+43	なんきんじょう	Padlock
+44	ひなどり	Chick
+45	なすび	Eggplant
+46	すなどけい	Hourglass
+47	せんたくき	Washing Machine
+48	かに	Crab
+49	プリンター	Printer
+50	ストーブ	Stove
+51	ヤリクリ	Pirate Goom
+52	Ｄバット	D-Bat
+53	パンチ	Punch
+54	ツリウオ	Tsuriuo
+55	イナマズ	Inamazu
+56	コック	Cook
+57	ヒキツネ	Hikitsune
+58	シロップ	Captain Syrup
+59	ワリオ	Wario
+60	チュウタ	Chuta
+61	ビッグカムカム	Big Kamukamu
+62	パックン	Piranha Plant
+63	プクプク	Cheep Cheep
+64	タマゴ	Yoshi's Egg
+65	ポチ	Poochy
+66	クラゲボン	Jellyfish
+67	ワープちゃん	Miss Warp
+68	ヨッシー	Yoshi
+69	ヘイホー	Shy Guy
+70	ウンババ	Blargg
+71	イソズキン	Sea Anemone
+72	テレサ	Boo
+73	コクッパ	Baby Bowser
+74	ジーンズ	Jeans
+75	ほおづえ	Chin in Hand
+76	コンパス	Drawing Compass
+77	しゃぼんだま	Soap Bubbles
+78	かんきせん	Ventilation Fan
+79	ぶどう	Grapes
+80	おばあちゃん	Grandma
+81	ハンガー	Hanger
+82	いちじく	Fig
+83	パピヨン	Papillon
+84	かじったリンゴ	Bitten Apple
+85	なわとび	Jump Rope
+86	シャベル	Shovel
+87	うちゅうひこうし	Astronaut
+88	ミルクとパン	Milk and Bread
+89	いちょうとぎんなん	Ginkgo and Nuts
+90	くうきいれ	Air Pump
+91	なでしこ	Dianthus
+92	ぼきんうんどう	Fundraising
+93	はぶらしとコップ	Toothbrush and Cup
+94	ベル	Bell
+95	ゆうびんやさん	Mail Carrier
+96	はい！	Yes!
+97	いちりんしゃ	Unicycle
+98	せんたくもの	Laundry
+99	じんこうえいせい	Satellite
+100	ふくわらい	Fukuwarai
+101	おうし	Bull
+102	おつきみ	Moon Viewing
+103	あじさいのはな	Hydrangea
+104	きりふき	Spray Bottle
+105	ゆわかしジャー	Hot Water Pot
+106	ボート	Boat
+107	たなばたのささ	Tanabata Bamboo
+108	せつぶん	Setsubun
+109	いのしし	Wild Boar
+110	しょうせつか	Novelist
+111	うらないし	Fortune Teller
+112	チェロそうしゃ	Cellist
+113	キャッチャー	Catcher
+114	ガン	Wild Goose
+115	けんどう	Kendo
+116	フォークリフト	Forklift
+117	いろり	Irori Hearth
+118	コンドル	Condor
+119	トレンチコート	Trench Coat
+120	とうもろこし	Corn
+121	セミのうか	Cicada Emerging
+122	あらいぐま	Raccoon
+123	はくとうわし	Bald Eagle
+124	ディレクターズチェア	Director's Chair
+125	コアラ	Koala
+126	ボクシング	Boxing
+127	シュノーケル	Snorkel
+128	しゃちほこ	Shachihoko
+129	じゃぐち	Faucet
+130	ふぐ	Pufferfish
+131	おもちゃのピストル	Toy Pistol
+132	えんぴつ	Pencil
+133	ぎょうざ	Gyoza
+134	ようしきトイレ	Western Toilet
+135	キーホルダー	Keychain
+136	まほうつかい	Wizard
+137	ヨーヨー	Yo-Yo
+138	う	Cormorant
+139	ぜんまいネズミ	Wind-up Mouse
+140	くろひょう	Black Panther
+141	やしのき	Palm Tree
+142	ＣＤプレイヤー	CD Player
+143	さむらい	Samurai
+144	スプーンまげ	Spoon Bending
+145	ドライヤー	Hair Dryer
+146	たけのこ	Bamboo Shoot
+147	ロールペーパー	Toilet Paper
+148	うなぎ	Eel
+149	コーヒー	Coffee
+150	たぬき	Tanuki
+151	なんぶてっき	Iron Kettle
+152	とぐろヘビ	Coiled Snake
+153	はと	Pigeon
+154	おたふく	Otafuku Mask
+155	ニホンザル	Japanese Macaque
+156	フランケンシュタイン	Frankenstein
+157	もくば	Rocking Horse
+158	マッシュルーム	Mushroom
+159	ペガサス	Pegasus
+160	ぼんさい	Bonsai
+161	ソフトクリーム	Soft Serve
+162	ピエロ	Clown
+163	うばぐるま	Baby Carriage
+164	ルアー	Fishing Lure
+165	かものはし	Platypus
+166	てんにょ	Celestial Maiden
+167	ゆうえんちのひこうき	Kiddie Plane Ride
+168	こうじげんば	Construction Site
+169	せいようのヨロイ	Suit of Armor
+170	メダカ	Medaka
+171	アホウドリ	Albatross
+172	オオムラサキ	Purple Emperor
+173	ムツゴロウ	Mudskipper
+174	ニホンツキノワグマ	Asian Black Bear
+175	シオマネキ	Fiddler Crab
+176	オオワシ	Steller's Sea Eagle
+177	ニホンカワウソ	Japanese Otter
+178	タガメ	Giant Water Bug
+179	アオウミガメ	Green Sea Turtle
+180	イリオモテヤマネコ	Iriomote Cat
+181	トキ	Crested Ibis
+182	あま	Ama Diver
+183	かさ	Umbrella
+184	うき	Fishing Float
+185	ゆき	Snow
+186	いわし	Sardines
+187	うろこ	Fish Scales
+188	ゆうやけ	Sunset
+189	にゅうどう	Giant Monk
+190	かみなり	Thunder
+191	ひつじ	Sheep
+192	ひこうき	Airplane
+193	そんごくう	Sun Wukong
+194	ヤシガニ	Coconut Crab
+195	へいきんだい	Balance Beam
+196	シラサギ	Egret
+197	インパラ	Impala
+198	きんたろう	Kintaro
+199	スイス／マッターホルン	Matterhorn
+200	メガマウス	Megamouth Shark
+201	ルリカケス	Lidth's Jay
+202	しんごうき	Traffic Light
+203	ヒトコブラクダ	Dromedary
+204	アンコウ	Anglerfish
+205	キタキツネ	Ezo Red Fox
+206	かぶ	Turnip
+207	とびうお	Flying Fish
+208	サイ	Rhinoceros
+209	めざましどけい	Alarm Clock
+210	ピーマン	Green Pepper
+211	しゅうまい	Shumai
+212	たいこ	Taiko Drum
+213	レシーブ	Volleyball Dig
+214	かぐやひめ	Princess Kaguya
+215	かわせみ	Kingfisher
+216	ミイラおとこ	Mummy
+217	ファインセーブ	Great Save
+218	どひょういり	Sumo Ring Entry
+219	イナゴ	Locust
+220	でんせんこうじ	Power Line Work
+221	ぶんぶくちゃがま	Bunbuku Chagama
+222	じょうば	Horse Riding
+223	カチカチやま	Kachi-Kachi Yama
+224	かぼちゃのばしゃ	Pumpkin Carriage
+225	シェパード	Shepherd
+226	うみのなか	Under the Sea
+227	おやさい	Vegetables
+228	しょうぶ	Japanese Iris
+229	ツバメとおうじ	The Happy Prince
+230	むしめがね	Magnifying Glass
+231	テニスのラケット	Tennis Racket
+232	シンバル	Cymbals
+233	ひょっとこ	Hyottoko Mask
+234	ブタのちょきんばこ	Piggy Bank
+235	イルカショー	Dolphin Show
+236	きじ	Pheasant
+237	たまてばこ	Treasure Box
+238	うらしまたろう	Urashima Taro
+239	いなばのしろうさぎ	White Hare of Inaba
+240	いっとうぼり	Ittobori Carving
+241	じゅうどう	Judo

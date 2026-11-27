@@ -37,6 +37,7 @@ GFX_LAYERS = {
     'bonus_bg2a': (0x0476F4, 0x04210B, 4, 0x000),   # not edited; for tile sharing
     'footer_bg2': (0x0476F4, 0x04210B, 4, 0x800),   # credits footer
     'prize_bg1': (0x0417BE, 0x040000, 4),           # prize screen postcard / deadline
+    'cert_tmpl': (0x047C02, 0x04210B, 4),   # not edited: its tiles must not be taken by the footer labels
 }
 LABEL_STYLES = {
     'menu': dict(fill=1, outline=3, font='arialbd.ttf', size=12),

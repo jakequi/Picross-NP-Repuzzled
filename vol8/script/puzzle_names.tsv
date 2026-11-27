@@ -1,0 +1,244 @@
+# Puzzle names (VWF text in each puzzle record). Columns: index, Japanese, English. Checked against solution images.
+# Vol. 8 has 242 puzzles: the second 120 are a gift selection from Vols. 1-5 (names reused). Character mode (50-61): Donkey Kong cast, official English names. Special mode (170-181): Sydney 2000 Olympics theme; names follow the pictures.
+0	かんせい！	Complete!
+1	アルファベットの「Ｎ」	The Letter N
+2	ほろばしゃ	Covered Wagon
+3	しいたけ	Shiitake
+4	カステラ	Castella Cake
+5	さといも	Taro
+6	てんたいぼうえんきょう	Telescope
+7	ほおずき	Chinese Lantern
+8	ワイシャツ	Dress Shirt
+9	さっちゅうざい	Bug Spray
+10	おふろ	Bath
+11	ライター	Lighter
+12	かんづめ	Tin Can
+13	くぎとかなづち	Hammer and Nail
+14	たてごと	Harp
+15	しきしゃ	Conductor
+16	パンとバター	Bread & Butter
+17	クリップ	Paper Clip
+18	プチトマト	Cherry Tomato
+19	ぎゅうにゅうびん	Milk Bottle
+20	ホッチキス	Stapler
+21	ふうしゃごや	Windmill
+22	サキソフォン	Saxophone
+23	まほうのランプ	Magic Lamp
+24	グローブ	Baseball Glove
+25	ナイフ	Pocketknife
+26	シルクハット	Top Hat
+27	はしご	Ladder
+28	じゃぐち	Faucet
+29	アイスクリーム	Ice Cream
+30	ホットケーキ	Pancakes
+31	おにぎり	Rice Ball
+32	しょうかき	Fire Extinguisher
+33	さんりんしゃ	Tricycle
+34	ウリぼう	Boar Piglet
+35	はかり	Scales
+36	ボタンインコ	Lovebird
+37	マシンガン	Machine Gun
+38	ハイヒール	High Heels
+39	ヘリコプター	Helicopter
+40	ランナー	Runner
+41	へび	Snake
+42	がくせいかばん	School Bag
+43	せいようのおはか	Gravestone
+44	たっきゅう	Table Tennis
+45	でんきスタンド	Desk Lamp
+46	ロケット	Rocket
+47	パソコン	Computer
+48	ぎょくざ	Throne
+49	アーチェリー	Archery
+50	ＤＫバレル	DK Barrel
+51	オウムのスコークス	Squawks
+52	バナナ	Banana
+53	カエルのウィンキー	Winky
+54	ファンキーコング	Funky Kong
+55	クランキーコング	Cranky Kong
+56	ディディーコング	Diddy Kong
+57	キャンディーコング	Candy Kong
+58	ダチョーのエクスプレッソ	Expresso
+59	カジキのエンガード	Enguarde
+60	ドンキーコング	Donkey Kong
+61	サイのランビ	Rambi
+62	ナビィ	Navi
+63	キータンのおめん	Keaton Mask
+64	ようせいのオカリナ	Fairy Ocarina
+65	ようせいのパチンコ	Fairy Slingshot
+66	ケポラ・ゲボラ	Kaepora Gaebora
+67	ゼルダひめ	Princess Zelda
+68	リンク	Link
+69	ルトひめ	Princess Ruto
+70	アキンドナッツ	Business Scrub
+71	エポナ	Epona
+72	ダルニア	Darunia
+73	ガノンドロフ	Ganondorf
+74	とりかご	Birdcage
+75	ふくろう	Owl
+76	おくすり	Medicine
+77	まんねんひつ	Fountain Pen
+78	ブルドッグ	Bulldog
+79	そうがんきょう	Binoculars
+80	パンダ	Panda
+81	さいばんかん	Judge
+82	きんぎょ	Goldfish
+83	かさとながぐつ	Umbrella and Boots
+84	かいちゅうでんとう	Flashlight
+85	リレー	Relay Race
+86	げた	Geta Sandals
+87	パイナップル	Pineapple
+88	トランシーバー	Walkie-Talkie
+89	シャワー	Shower
+90	はなび	Fireworks
+91	ポーチ	Pouch
+92	たきび	Campfire
+93	むぎわらぼうし	Straw Hat
+94	こうすい	Perfume
+95	ほん	Book
+96	カプセル	Capsule
+97	ツールボックス	Toolbox
+98	つりがね	Temple Bell
+99	こぜにいれ	Coin Purse
+100	そらまめ	Fava Beans
+101	ゆきうさぎ	Snow Bunny
+102	しょどう	Calligraphy
+103	びわ	Loquat
+104	カーネーション	Carnation
+105	ティーポット	Teapot
+106	ちゅうしゃき	Syringe
+107	ウクレレ	Ukulele
+108	プッシュホン	Push-Button Phone
+109	キャベツ	Cabbage
+110	ひこうき	Airplane
+111	バイオリンそうしゃ	Violinist
+112	スポーツバッグ	Sports Bag
+113	ぐんかん	Battleship
+114	シマウマ	Zebra
+115	ピエロ	Clown
+116	ボーリング	Bowling
+117	カジキマグロ	Marlin
+118	フェンシング	Fencing
+119	ドードー	Dodo
+120	だいどうげいにん	Street Performer
+121	ビリヤード	Billiards
+122	せんぷうき	Electric Fan
+123	とり	Bird
+124	なまけもの	Sloth
+125	すべりだい	Slide
+126	わんちゃん	Doggy
+127	ダンベル	Dumbbell
+128	くじら	Whale
+129	もくば	Rocking Horse
+130	インラインスケートぐつ	Inline Skates
+131	ソファ	Sofa
+132	タクシー	Taxi
+133	たぬきのおきもの	Tanuki Statue
+134	ロンドンブーツ	Platform Boots
+135	トランペット	Trumpet
+136	ナウマンゾウ	Naumann Elephant
+137	さる	Monkey
+138	ＰＨＳ	PHS Phone
+139	けむし	Caterpillar
+140	ペンキとローラー	Paint & Roller
+141	ようせい	Fairy
+142	ベッド	Bed
+143	ゴリラ	Gorilla
+144	アリ	Ant
+145	スプレーボトル	Spray Bottle
+146	ばいきんくん	Germ
+147	カバ	Hippo
+148	やきとり	Yakitori
+149	マジック	Magic Trick
+150	てんし	Angel
+151	あんぜんヘルメット	Hard Hat
+152	ゾウ	Elephant
+153	ブタのコックさん	Pig Chef
+154	おまる	Potty
+155	しか	Deer
+156	＄ぶくろ	Money Bag
+157	はなたば	Bouquet
+158	カンガルー	Kangaroo
+159	サッカーボール	Soccer Ball
+160	とっくり	Sake Bottle
+161	けが	Injury
+162	ピノキオ	Pinocchio
+163	あかちゃん	Baby
+164	ユニコーン	Unicorn
+165	ワインでかんぱい	Toast with Wine
+166	パイプ	Pipe
+167	バッター	Batter
+168	はかせ	Professor
+169	かしゅ	Singer
+170	とうきょう	Tokyo
+171	ビーチバレー	Beach Volleyball
+172	じっきょうちゅうけい	Live Broadcast
+173	すいえい	Swimming
+174	りくじょう	Track and Field
+175	アテネ	Athens
+176	たいそう	Gymnastics
+177	しゃげき	Shooting
+178	じゅうどう	Judo
+179	メダル	Medal
+180	トーチリレー	Torch Relay
+181	シドニー	Sydney
+182	あさがお	Morning Glory
+183	ほたる	Firefly
+184	かがりび	Bonfire
+185	あかし	Akashi
+186	ふじつぼ	Barnacles
+187	とこなつ	Endless Summer
+188	かげろう	Mayfly
+189	よこぶえ	Bamboo Flute
+190	こうばい	Red Plum
+191	あおい	Hollyhock Crest
+192	えまき	Picture Scroll
+193	むらさきしきぶ	Murasaki Shikibu
+194	あまがえる	Tree Frog
+195	ウンゼンツツジ	Unzen Azalea
+196	クロッカス	Crocus
+197	ちくおんき	Gramophone
+198	ピザやさんのバイク	Pizza Delivery Bike
+199	おうだんほどう	Crosswalk
+200	ホットドックセット	Hot Dog Set
+201	オフロードバイク	Off-Road Bike
+202	オコジョ	Stoat
+203	コアリクイ	Tamandua
+204	りゅう	Dragon
+205	いご	Go
+206	タカ	Hawk
+207	えいせいアンテナ	Satellite Dish
+208	ペリカン	Pelican
+209	キツツキ	Woodpecker
+210	シロチドリ	Kentish Plover
+211	バスケットボール	Basketball
+212	けり	Kick
+213	ホームラン	Home Run
+214	さらまわし	Plate Spinning
+215	バッファロー	Buffalo
+216	そらとぶじゅうたん	Flying Carpet
+217	ペンギン	Penguin
+218	うしわかまる	Ushiwakamaru
+219	いっすんぼうし	Issun-boshi
+220	バッターボックス	Batter's Box
+221	じゅうなんたいそう	Stretching
+222	やぎ	Goat
+223	タコ	Octopus
+224	つるのおんがえし	The Grateful Crane
+225	ジョッキー	Jockey
+226	フォークシンガー	Folk Singer
+227	ハタ	Grouper
+228	おうむ	Parrot
+229	ボールあそびをするいぬ	Dog Playing Ball
+230	えんばんなげ	Discus Throw
+231	アシカ	Sea Lion
+232	カウボーイハット	Cowboy Hat
+233	かぎ	Key
+234	かきつばた	Iris
+235	しちめんちょう	Turkey
+236	ブロントサウルス	Brontosaurus
+237	はち	Bee
+238	つめきり	Nail Clippers
+239	スノーモービル	Snowmobile
+240	はとぐるま/のざわ	Pigeon Cart (Nozawa)
+241	よこづな	Yokozuna

@@ -113,6 +113,9 @@ def frame_cells(entries):
                 yield i, t, e['x'] + dx * 8, e['y'] + dy * 8, e['hf'], e['vf']
 
 
+DEDUPE_PAINTED = False   # set by the build for volumes that opt in (Vol. 6+)
+
+
 def paint_frames(rom, sheet, frames, painter, alloc, all_frames_tiles, group=None):
     """Paint onto the rendered image of `frames` (which must share identical layout).
     painter(canvas, ox, oy) edits the index canvas in place (frame coords + (ox, oy)).
@@ -156,7 +159,9 @@ def paint_frames(rom, sheet, frames, painter, alloc, all_frames_tiles, group=Non
                 for _, t, x, y, hf, vf in subs:
                     nt = t
                     if (i, t) in remap:
-                        nt = sheet.alloc_strip(remap[(i, t)])[0]
+                        img = remap[(i, t)]
+                        key = ('painted', img.tobytes()) if DEDUPE_PAINTED else None   # identical tiles shared
+                        nt = sheet.alloc_strip(img, key=key)[0]
                     out.append(dict(e, x=x, y=y, tile=nt, big=False))
             else:
                 out.append(e)

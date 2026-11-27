@@ -1,0 +1,35 @@
+# Bonus pages (table C4:C1E7, 13 pages; page 12 = copyright page, kept). Columns: page, row (top map row of the 16px line), kind (T = title colour, N = name colour), Japanese, English
+# Page 0 is the "Picross NP Vol.x / Staff" title page: its logo records are kept, the word Staff replaced. Max ~20 characters per line.
+0	14	T	スタッフ	Staff
+1	9	T	プログラマー	Programmer
+1	12	N	ふなこしまさのり	Masanori Funakoshi
+2	8	T	アディショナル	Additional
+2	10	T	プログラマー	Programmer
+2	13	N	あべこういち	Koichi Abe
+3	6	T	CGデザイナー	CG Designers
+3	9	N	めぐろのりちか	Norichika Meguro
+3	11	N	くろいわせいじ	Seiji Kuroiwa
+3	13	N	しもむらひでみ	Hidemi Shimomura
+3	15	N	さわだかおり	Kaori Sawada
+4	9	T	サウンド	Sound
+4	12	N	うえのとしゆき	Toshiyuki Ueno
+5	8	T	せいさくしんこう	Project Managers
+5	11	N	おがたはたお	Hatao Ogata
+5	14	N	はるきさよ	Sayo Haruki
+6	6	T	もんだいさくせい	Puzzle Creators
+6	9	N	ふじわらみつお	Mitsuo Fujiwara
+6	12	N	たなかまりや	Mariya Tanaka
+6	15	N	しもむらひでみ	Hidemi Shimomura
+7	9	T	イラスト	Illustration
+7	12	N	わたがわこうじ	Koji Watagawa
+8	6	T	せいさくきょうりょく	Special Thanks
+8	11	N	さとうひろし	Hiroshi Sato
+8	14	N	ほったたくじ	Takuji Hotta
+9	6	T	せいさくきょうりょく	Special Thanks
+9	11	N	たわらまさき	Masaki Tawara
+9	14	N	ふじわらまさみち	Masamichi Fujiwara
+10	6	T	せいさくきょうりょく	Special Thanks
+10	11	N	NPチーム	NP Team
+10	14	N	スーパーマリオクラブ	Super Mario Club
+11	9	T	プロデューサー	Producer
+11	12	N	なかやままこと	Makoto Nakayama

@@ -50,6 +50,8 @@ class Rom:
         self.free = list(V.FREE)
 
     def alloc(self, n):
+        if n < 0x8000:   # small items (frames, glyphs, blobs) never straddle a bank boundary
+            return self.alloc_one_bank(n)
         for k, (s, e) in enumerate(self.free):
             if e - s >= n:
                 self.free[k] = (s + n, e)
@@ -109,11 +111,20 @@ class Rom:
                 self.d[p] = addr & 0xFF; self.d[p + 1] = addr >> 8; self.d[p + 2] = bank
         return refs
 
+    def alloc_one_bank(self, n):
+        """Allocate n bytes that do not cross a 64 KB bank boundary (the LZ decompressor cannot read across one:
+        a Vol. 6 rank-title blob at D5:FFA0 decompressed as blank titles)."""
+        for k, (s, e) in enumerate(self.free):
+            a = s if (s >> 16) == ((s + n - 1) >> 16) else (s + 0xFFFF) & ~0xFFFF
+            if a + n <= e:
+                return self.alloc_in(n, a, a + n)
+        raise RuntimeError('no single-bank free space for %d bytes' % n)
+
     def replace_blob(self, src, data, header=True):
         comp = lz.compress(data, header=header)
         check, _ = lz.decompress(comp, 0, None if header else len(data))
         assert check == data, 'compressor round-trip failed'
-        new = self.alloc(len(comp))
+        new = self.alloc_one_bank(len(comp))
         self.write(new, comp)
         refs = self.repoint(src, new)
         print('  blob %06x -> %06x (%d bytes, %d refs)' % (src, new, len(comp), len(refs)))
@@ -267,9 +278,9 @@ def jp_line_widths(rom_bytes, raw):
         while True:
             w = struct.unpack_from('<H', d, V.KANJI_LIST + k)[0]
             if w == 0:
-                return 0x9C
+                return vwf_en.GLYPH_ADD
             if w == code:
-                return k // 2 + 0x10C + 0x9C
+                return k // 2 + 0x10C + vwf_en.GLYPH_ADD
             k += 2
     widths = [0]; p = 0
     while p < len(raw):
@@ -390,6 +401,17 @@ def render_label_image(layer, rect, st, en):
                                        font=st['font'], size=st['size'], y_off=st.get('y_off'))
     if size < st['size']:
         print('  note: label %r shrunk to %dpx' % (en, size))
+    if 'pattern' in st:
+        # text over a repeating background (Vol. 6 title band): pattern = (period, old text colour); each phase
+        # of the period is copied from a column of the original that has no old text in it
+        pw, old_ink = st['pattern']
+        clean = {}
+        for x in range(W):
+            if not (orig[:, x] == old_ink).any():
+                clean.setdefault(x % pw, x)
+        assert len(clean) == pw, 'pattern: no clean column for every phase'
+        bg = np.stack([orig[:, clean[x % pw]] for x in range(W)], axis=1)
+        img = np.where(img != 0, img, bg)
     if 'keep_rows' in st:
         a, b = st['keep_rows']
         img[a:b, :] = np.where(img[a:b, :] != 0, img[a:b, :], orig[a:b, :])
@@ -523,6 +545,15 @@ def menu_sprites(rom, cache, S):
     for f in S.MENU_FRAMES:
         for i, t, *_ in spritetext.frame_cells(metasprite.parse_frame(rom.orig, f)):
             users.setdefault(t, set()).add(f)
+    def reclaim_mode_labels():
+        rc = [t for t in S.MODE_LABEL_TILES if users.get(t, set()) <= set(S.MODE_LABELS)]
+        for t in rc:
+            sheet.put(t, np.zeros((8, 8), np.uint8))
+        sheet.free = rc + sheet.free
+    early = getattr(S, 'RECLAIM_MODE_LABELS_FIRST', False)   # Vol. 6+: few blank menu tiles, free the labels first
+    spritetext.DEDUPE_PAINTED = early
+    if early:
+        reclaim_mode_labels()
     x0, y0, x1, y1 = S.PANEL_BOX
     for frames, lines in S.PANELS:
         for f in frames:
@@ -542,12 +573,12 @@ def menu_sprites(rom, cache, S):
                 img = tinyfont.render(text, lx1 - lx0, 7, fill=fill, outline=outline, bg=bg, align=align, y_top=1)
                 area = cv[top + oy:top + 7 + oy, lx0 + ox:lx1 + ox]
                 area[img != bg] = img[img != bg]
-        spritetext.paint_frames(rom, sheet, list(P['frames']), painter, rom.alloc, users, group=set(P['frames']))
+        # 'group': frames whose shared tiles may be painted in place (a later panel copies what differs)
+        spritetext.paint_frames(rom, sheet, list(P['frames']), painter, rom.alloc, users,
+                                group=set(P.get('group', P['frames'])))
     # mode labels: reclaim old label tiles, draw one label per frame as 8x8 entries
-    reclaim = [t for t in S.MODE_LABEL_TILES if users.get(t, set()) <= set(S.MODE_LABELS)]
-    for t in reclaim:
-        sheet.put(t, np.zeros((8, 8), np.uint8))
-    sheet.free = reclaim + sheet.free
+    if not early:
+        reclaim_mode_labels()
     for f, text in sorted(S.MODE_LABELS.items()):
         pal = metasprite.parse_frame(rom.orig, f)[0]['pal']
         img = spritetext.text_strip(text, fill=9, outline=0xE, bg=0)
@@ -611,6 +642,9 @@ def certificates(rom, cache):
         other |= set(labels.TileLayer(cache, m, V.CERT_CHR, 4, map_off=off).usage())
     rows = range(9, 21)
     text_tiles = set(); spans = {}
+    # a tile is reusable only if every certificate map uses it inside the text rows (the template's row 8 decoration
+    # shares tile 0x48 with the full certificate's text area in Vols. 1-5)
+    outside = {t for L in layers.values() for t, ps in L.usage().items() if any(py not in rows for px, py in ps)}
     for k, L in layers.items():
         u = L.usage()
         cells = []
@@ -619,7 +653,7 @@ def certificates(rom, cache):
                 t = L.entry(tx, ty) & 0x3FF
                 if t == V.CERT_BLANK or t in other:
                     continue
-                if all(py in rows for px, py in u[t]):
+                if all(py in rows for px, py in u[t]) and t not in outside:
                     cells.append((tx, ty)); text_tiles.add(t)
         spans[k] = (min(c[0] for c in cells), max(c[0] for c in cells))
         blank_word = next(L.entry(tx, 9) for tx in range(32) if L.entry(tx, 9) & 0x3FF == V.CERT_BLANK)
@@ -656,13 +690,37 @@ def credit_pages(rom, cache):
     data = cache.get(V.CREDIT_FONT_BLOB)
     pool = [t for t in range(0x255, len(data) // 16) if not any(data[t * 16:t * 16 + 16])]
     blank = pool.pop(0)
-    font = glyphfont.GlyphFont(cache, V.CREDIT_FONT_BLOB, 2, pool, dict(fill=1, shadow=2))
     rows = {}
     for line in open(os.path.join(HERE, 'script', 'credits.tsv'), encoding='utf-8'):
         if not line.strip() or line.startswith('#'):
             continue
         page, row, kind, jp, en = line.rstrip('\n').split('\t')
         rows.setdefault(int(page), []).append((int(row), kind, en))
+    if getattr(V, 'CREDIT_RECLAIM', False):
+        # Vol. 6+: few blank font tiles. Reuse the old kana tiles of the text being replaced (credit names/titles
+        # and the rank titles), unless kept text (logo, copyright page, other rank rows) still uses them.
+        m0 = cache.get(V.RANK_MAP_BLOB)
+        rank_rows = {int(l.split('\t')[0]) for l in open(os.path.join(HERE, 'script', 'ranks.tsv'), encoding='utf-8')
+                     if l.strip() and not l.startswith('#')}
+        old, keep = set(), set()
+        for p, recs in enumerate(C.pages(rom.orig)):
+            for off, words in recs:
+                logo = (words[0] >> 10) & 7 == 4
+                (old if p in rows and not logo else keep).update(w & 0x3FF for w in words)
+        for r in range(len(m0) // 0x80):
+            (old if r in rank_rows else keep).update(w & 0x3FF for w in struct.unpack_from('<64H', m0, r * 0x80))
+        extra = sorted(t for t in old - keep - {blank, 0} if t < len(data) // 16 and t not in pool)
+        pool = pool + extra
+        print('  reclaimed %d old credit/rank glyph tiles' % len(extra))
+    # Vol. 6: the per-mode certificate uploads only the first 4 KB of this font (tiles < 0x100), so rank titles get
+    # their own glyphs from low tiles; empty cells use tile 0 like the original rank rows.
+    limit = getattr(V, 'RANK_GLYPH_LIMIT', None)
+    rank_pool = [t for t in pool if t < limit] if limit else None
+    if limit:
+        pool = [t for t in pool if t >= limit]
+    font = glyphfont.GlyphFont(cache, V.CREDIT_FONT_BLOB, 2, pool, dict(fill=1, shadow=2))
+    rank_font = glyphfont.GlyphFont(cache, V.CREDIT_FONT_BLOB, 2, rank_pool, dict(fill=1, shadow=2)) if limit else font
+    rank_blank = 0 if limit else blank
     pages = C.pages(rom.orig)
     for p, lines in rows.items():
         if p == 0:   # keep decoration (palette 4) records, drop the old title
@@ -705,15 +763,16 @@ def credit_pages(rom, cache):
         o = k * 0x80
         assert len(en) <= 16
         start = (16 - len(en)) // 2
-        cells = font.cells(en)
+        cells = rank_font.cells(en)
         for half in (0, 1):
             for c in range(16):
                 i = c - start
                 w = 0
                 if 0 <= i < len(cells) and cells[i] is not None:
                     w = 0x2000 | cells[i][half]
+                    assert not limit or cells[i][half] < limit
                 elif 0 <= i < len(cells):
-                    w = 0x2000 | blank
+                    w = 0x2000 | rank_blank
                 struct.pack_into('<H', m, o + half * 0x40 + c * 2, w)
     print('  %d rank titles, %d glyphs total' % (len(titles), len(font.glyphs)))
 
@@ -745,8 +804,10 @@ def configure(volume_dir):
     metasprite.TABLE = V.METASPRITE_TABLE
     tutorial.BASE = V.TUT_BASE
     credits_mod.TABLE = V.CREDIT_TABLE
+    credits_mod.NPAGES = getattr(V, 'CREDIT_PAGES', 12)
     vwf.TABLE, vwf.BASE_ADD = V.VWF_TABLE, V.VWF_BASE_ADD
     vwf_en.SJIS_ROWS = getattr(V, "SJIS_ROWS", 0x2695)
+    vwf_en.GLYPH_ADD = getattr(V, "GLYPH_ADD", 0x9C)
     return V
 
 

@@ -1,0 +1,244 @@
+# Puzzle names (VWF text in each puzzle record). Columns: index, Japanese, English. Checked against solution images.
+# Vol. 6 has 242 puzzles: the second 120 are a gift selection from Vols. 1-5 (names reused). Character mode (50-61): Super Mario 64, official English names. Special mode (170-181): Italy theme; names follow the pictures.
+0	かんせい！	Complete!
+1	アルファベットの「Ｎ」	The Letter N
+2	ペリカン	Pelican
+3	あさがお	Morning Glory
+4	ティピ	Teepee
+5	けしょうひん	Cosmetics
+6	せいようのかぶと	Knight's Helmet
+7	オオサンショウウオ	Giant Salamander
+8	ウイスキー	Whisky
+9	ゼリー	Jelly
+10	すずらん	Lily of the Valley
+11	じょうば	Horse Riding
+12	えび	Shrimp
+13	エプロン	Apron
+14	ハンガー	Hanger
+15	もくぎょ	Wooden Fish Drum
+16	パレット	Palette
+17	スリッパ	Slippers
+18	マニキュア	Nail Polish
+19	ガーデニング	Gardening
+20	ペットボトル	Plastic Bottle
+21	ビートばん	Kickboard
+22	さそり	Scorpion
+23	いかり	Anchor
+24	コンパクトカメラ	Compact Camera
+25	ユニコーン	Unicorn
+26	マジックハンド	Grabber Toy
+27	チャボ	Bantam
+28	くり	Chestnut
+29	こま	Spinning Top
+30	はちうえ	Potted Plant
+31	えいしゃき	Projector
+32	とうがらし	Chili Pepper
+33	さざえ	Turban Shell
+34	きょうかい	Church
+35	ゾウののりもの	Elephant Ride
+36	えびす	Ebisu
+37	しょうぎのコマ	Shogi Piece
+38	はかり	Scales
+39	ねったいぎょ	Tropical Fish
+40	かざぐるま	Pinwheel
+41	くじら	Whale
+42	ショッピングバッグ	Shopping Bag
+43	マーカー	Marker
+44	ライター	Lighter
+45	バトミントンのはね	Shuttlecock
+46	ミルクパック	Milk Carton
+47	トラック	Truck
+48	カメラ	Camera
+49	おけ	Wooden Tub
+50	クリボー	Goomba
+51	ワッキィ	Ukiki
+52	キノピオ	Toad
+53	ジュゲム	Lakitu
+54	ピーチひめ	Princess Peach
+55	どんけつ	Bully
+56	ノコノコ	Koopa Troopa
+57	マリオ	Mario
+58	ペンギンのおやこ	Penguin and Baby
+59	バッタン	Whomp
+60	ハナチャン	Wiggler
+61	クッパ	Bowser
+62	スリッピー・トード	Slippy Toad
+63	ピグマ・デンガー	Pigma Dengar
+64	フォックス・マクラウド	Fox McCloud
+65	ウルフ・オドネル	Wolf O'Donnell
+66	アンドリュー・オイッコニー	Andrew Oikonny
+67	ファルコ・ランバルディ	Falco Lombardi
+68	レオン・ポワルスキー	Leon Powalski
+69	ペッピー・ヘア	Peppy Hare
+70	ランドマスター	Landmaster
+71	アーウィン	Arwing
+72	グレートフォックス	Great Fox
+73	Ｄｒ．アンドルフ	Andross
+74	わらぶきやねのいえ	Thatched House
+75	かわうそ	Otter
+76	まんじゅう	Steamed Bun
+77	かとりせんこう	Mosquito Coil
+78	ブランコ	Swing
+79	でんきスタンド	Desk Lamp
+80	あまがさ	Umbrella
+81	ハムスター	Hamster
+82	あおだいしょう	Rat Snake
+83	でんきドライバー	Power Screwdriver
+84	じどうしゃ	Automobile
+85	つる	Crane
+86	サクランボ	Cherries
+87	ボクサー	Boxer
+88	ヘリコプター	Helicopter
+89	ふぐちょうちん	Pufferfish Lantern
+90	しめじ	Shimeji Mushrooms
+91	ガーデニングセット	Gardening Set
+92	べんきょう	Studying
+93	うきわ	Swim Ring
+94	てるてるぼうず	Teru Teru Bozu
+95	ショウリョウバッタ	Grasshopper
+96	パグ	Pug
+97	ききゅう	Hot-Air Balloon
+98	ドライヤー	Hair Dryer
+99	てんとうむし	Ladybug
+100	けんとたて	Sword and Shield
+101	ケーキボックス	Cake Box
+102	こども	Child
+103	ブリッジ	Bridge
+104	はくさい	Napa Cabbage
+105	レッサーパンダ	Red Panda
+106	すずめ	Sparrow
+107	しか	Deer
+108	マッシュルーム	Mushroom
+109	パナマぼう	Panama Hat
+110	ふくろう	Owl
+111	かびん	Vase
+112	ウィンドサーフィン	Windsurfing
+113	だんじり	Danjiri Float
+114	フラメンコ	Flamenco
+115	ピアニスト	Pianist
+116	おりづる	Paper Crane
+117	クッキング	Cooking
+118	さんしょくだんご	Tricolor Dango
+119	シェフ	Chef
+120	だちょう	Ostrich
+121	おさけ	Sake
+122	チキン	Roast Chicken
+123	おさる	Monkey
+124	しりょくけんさ	Eye Test
+125	トランプ	Playing Cards
+126	はくちょう	Swan
+127	イエローカード	Yellow Card
+128	まねきねこ	Lucky Cat
+129	かびん	Vase
+130	にくまん	Pork Bun
+131	ひつじ	Sheep
+132	ミシン	Sewing Machine
+133	ジョッキー	Jockey
+134	ポスト	Postbox
+135	りす	Squirrel
+136	なまず	Catfish
+137	てんし	Angel
+138	ポット＆カップ	Teapot & Cup
+139	けいとだま	Ball of Yarn
+140	つるぎ	Sword
+141	くじゃく	Peacock
+142	かもめ	Seagull
+143	ロボット	Robot
+144	ミサゴ	Osprey
+145	こぶた	Piglet
+146	ハンバーグ	Hamburg Steak
+147	わんちゃん	Doggy
+148	おぼうさん	Monk
+149	テリア	Terrier
+150	ブランコ	Swing
+151	さぎょうロボット	Work Robot
+152	きんぎょ	Goldfish
+153	とらねこ	Tabby Cat
+154	たいじゅうけい	Bathroom Scale
+155	たっきゅうびん	Parcel Delivery
+156	オルゴール	Music Box
+157	りゅう	Dragon
+158	サイフォン	Coffee Siphon
+159	ほちゅうあみ	Bug Net
+160	こうしゅうでんわ	Payphone
+161	バラ	Rose
+162	サンドウィッチ	Sandwich
+163	ミルクピッチャー	Milk Jug
+164	やまゆり	Mountain Lily
+165	クロコダイル	Crocodile
+166	ぼんさい	Bonsai
+167	おなべ	Cooking Pot
+168	すもう	Sumo
+169	クレオパトラ	Cleopatra
+170	くるま	Car
+171	サッカー	Soccer
+172	ガラスざいく	Glasswork
+173	ワイン	Wine
+174	ピザ	Pizza
+175	うんが	Canal
+176	よくじょう	Roman Bath
+177	スーツ	Suit
+178	コロシアム	Colosseum
+179	マフィア	Mafia
+180	しゃとう	Leaning Tower
+181	ながぐつ	Boot
+182	たつまき	Tornado
+183	まじょ	Witch
+184	かかし	Scarecrow
+185	きこり	Woodcutter
+186	ライオン	Lion
+187	おはなばたけ	Flower Field
+188	きゅうでん	Palace
+189	いぬ	Dog
+190	めがね	Glasses
+191	ききゅう	Hot-Air Balloon
+192	くつ	Shoes
+193	ミュージカル	Musical
+194	フラミンゴ	Flamingo
+195	ヨーヨー	Yo-Yo
+196	ヘッドフォン	Headphones
+197	はさみ	Scissors
+198	やぎ	Goat
+199	サイクリング	Cycling
+200	ひらおよぎ	Breaststroke
+201	おに	Oni
+202	ボディビル	Bodybuilding
+203	ばしゃ	Carriage
+204	ひこうき	Airplane
+205	オートバイ	Motorcycle
+206	えま	Ema Plaque
+207	かざんのふんか	Erupting Volcano
+208	さやえんどう	Snow Peas
+209	つりざお	Fishing Rod
+210	とびこみ	Diving
+211	アイスホッケー	Ice Hockey
+212	ビックリばこ	Jack-in-the-Box
+213	うめ	Plum Blossom
+214	かみなりさま	Thunder God
+215	てんし	Angel
+216	たいぐるま/かごしま	Tai Cart (Kagoshima)
+217	たこ	Octopus
+218	アロマテラピー	Aromatherapy
+219	こんちゅうさいしゅう	Bug Collecting
+220	ぶた	Pig
+221	まちのあかり	Streetlamp
+222	めがねざる	Tarsier
+223	エレファント	Elephant
+224	わに	Crocodile
+225	きつね	Fox
+226	とさいぬ	Tosa Dog
+227	スピーチ	Speech
+228	カメレオン	Chameleon
+229	フィギュアスケート	Figure Skating
+230	クロワッサン	Croissant
+231	のうめん	Noh Mask
+232	うちでのこづち	Magic Mallet
+233	パラグライダー	Paragliding
+234	トナカイ	Reindeer
+235	ケンタウロス	Centaur
+236	おいしゃさん	Doctor
+237	ＴＶゲーム	Video Game
+238	バレエ	Ballet
+239	ぞうがめ	Giant Tortoise
+240	スイカ	Watermelon
+241	あかべこ/ふくしま	Akabeko (Fukushima)

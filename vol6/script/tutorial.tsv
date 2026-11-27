@@ -1,0 +1,102 @@
+# How-to-play script (C1:16E2 bytecode). Key = section.op. \n = new line. Same script in Vols. 6-8; lines reused from Vol. 5 where the Japanese is identical.
+0.3	それでは\n「ピクロス」の遊び方を\n説明します。	Now I'll explain\nhow to play Picross.
+0.7	上の数字と、	The numbers on top
+0.9	左の数字を\n	 and left\n
+0.11	ヒントにしてフィールドにある\nマスをぬりつぶします。	are hints for filling in\nsquares on the field.
+0.16	正しくぬりつぶせたら\n	Fill them in correctly,\n
+0.22	フィールドの中にかくされた\n絵が完成します。	and the picture hidden\nin the field appears!
+0.27	次に、「ピクロス」のルールを\n説明します。	Next, I'll explain\nthe rules of Picross.
+0.31	上にある数字の列は\n	The numbers along the top\n
+0.33	フィールドをタテに\nぬりつぶせる数を\nあらわしています。	tell you how many squares\nto fill in each column.
+0.37	たとえば、この「５」は\n	For example, this "5"\n
+0.40	タテに連続して\n５マスぬりつぶせることを\nあらわしています。	means 5 squares in a row\nare filled in this column.
+0.49	左にある数字の列は\n	The numbers on the left\n
+0.51	フィールドをヨコに\nぬりつぶせる数を\nあらわしています。	tell you how many squares\nto fill in each row.
+0.55	たとえば、この「３」と「１」は\n	For example, "3" and "1"\n
+0.58	左から３マスと	mean 3 squares from the left,
+0.61	さらにはなれた\nところを１マス	\nthen a gap, then 1 more
+0.64	ぬりつぶせる\nことをあらわしています。	\nsquare are filled in.
+0.71	問題の制限時間は３０分です。\nそれまでに絵を完成できないと\n	Each puzzle has a 30-minute\nlimit. Fail to finish in time\n
+0.74	ゲームオーバーになります。	and the game is over.
+0.80	まちがったマスをぬりつぶすと\n	Fill in a wrong square\n
+0.85	残り時間が減ります。	and you lose time.
+0.87	\nですから、あわてないで\nしんちょうに…。	\nSo don't rush.\nTake your time...
+0.98	ぬりつぶしてはいけない\nマスがわかったら、「×」の印を\nつけておくと	When you know a square\nshouldn't be filled, mark it\nwith an X.
+0.102	\nてがかりがふえて便利です。	\nThat gives you more clues!
+0.108	「Ｒｅａｄｙ？」で\n「ヒントをつかう」を選択すると	Choose "Use a Hint" at\nthe "Ready?" window
+0.113	\nヒントのルーレットが\n回ります。	\nand the hint roulette\nwill start spinning.
+0.118	動いているカーソルは\nＡボタンでストップします。	Press the A Button to stop\nthe moving cursor.
+0.120	\n最初は上のカーソル	\nFirst the top cursor...
+0.123	\nつぎに左のカーソルです。	\nthen the left cursor.
+0.129	すると止まったところの\nタテとヨコのマスの答えが\n全てわかります。	The column and row where\nthey stop are completely\nrevealed!
+0.135	これで「きほんルール」の\n説明は終わりです。	That's the end of\n"Basic Rules."
+0.140	それではがんばって下さい。	Good luck!
+1.2	ここでは「便利な機能」を\n説明します。	Here I'll explain\n"Handy Features."
+1.6	ゲーム中に\nスタートボタンを押すと	If you press START\nduring a game,
+1.11	\nメニューがあらわれます。	\nthe menu will appear.
+1.15	「ギブアップ」を選んで	Choose "Give Up,"
+1.19	\n「はい」を選ぶと	\nthen "Yes,"
+1.21	\nパズルを途中で\nやめることができます。	\nto quit the puzzle\npart way through.
+1.25	ただし、解いている途中の\nデータは消えてしまいます。	However, your progress on\nthat puzzle will be lost.
+1.32	「セーブ」を選んで	Choose "Save,"
+1.36	\n「はい」を選ぶと	\nthen "Yes,"
+1.37	\nパズルのセーブをして\nタイトルにもどります。	\nto save the puzzle and\nreturn to the title screen.
+1.41	セーブファイルを選ぶと\nつづきからプレイできます。	Choose that save file\nto continue playing later.
+1.48	ゲーム中のＢＧＭはここで	The in-game music
+1.55	\nステレオ／モノラルはここで	\nand Stereo/Mono
+1.59	\nへんこうできます。	\ncan be changed here.
+1.66	「ヒント」を選んで	Choose "Hint,"
+1.70	\n「はい」を選ぶと\n	\nthen "Yes,"\n
+1.72	タテ１列、ヨコ１列の\nヒントがもらえます。	to get a hint for\none column and one row.
+1.76	ただし、ヒントを１回使うと\n残り時間が５分減ります。	But each hint you use\ncosts 5 minutes of time.
+1.83	「プロフェッショナル」モードでは\n「ヒント」がなくなり\n「？スタート」が選べます。	In "Professional" mode\nthere are no hints, but\nyou can choose "? Start."
+1.101	くわしくは、次の「？スタート」を\nごらん下さい。	For details, see\n"? Start" next.
+1.108	これで「便利な機能」の\n説明は終わりです。	That's the end of\n"Handy Features."
+1.112	それではがんばって下さい。	Good luck!
+2.2	ここでは「？スタート」について\n説明します。	Here I'll explain\n"? Start."
+2.6	「プロフェッショナル」モードで\nスタートボタンを押すと	In "Professional" mode,\npress START
+2.11	\nメニューの一番下に「？スタート」\nが表示されます。	\nand "? Start" appears at\nthe bottom of the menu.
+2.16	「？スタート」を選んで	Choose "? Start,"
+2.20	\n「はい」を選ぶと	\nthen "Yes,"
+2.26	\n試し置きモードになります。	\nto enter Trial Mode.
+2.30	試し置きモードでは\nぬりつぶしたマスも「×」印も\n黄色で仮表示されます。	In Trial Mode, filled squares\nand X marks are shown\ntemporarily in yellow.
+2.35	このモードを終わるには\nスタートボタンを押して	To end this mode,\npress START,
+2.41	\n「？エンド」を選んで	\nchoose "? End,"
+2.45	\n「はい」を選んで下さい。	\nthen choose "Yes."
+2.51	すると、試し置きしたマスを\n決定します。	The squares you tried\nwill then be confirmed.
+2.62	ぎゃくに、試し置きしたあと	But if, after trying,
+2.75	\n試し置きモードを終わる時に\n「いいえ」を選ぶと	\nyou choose "No" when\nending Trial Mode,
+2.95	試し置きがむこうになります。	your trial moves are undone.
+2.99	このように「？スタート」を\nうまく活用して\n難問にチャレンジして下さい。	Use "? Start" wisely\nto take on the toughest\npuzzles!
+2.103	これで「？スタート」の\n説明は終わりです。	That's the end of\n"? Start."
+2.107	それではがんばって下さい。	Good luck!
+3.2	ここでは「ふたりプレイ」\nについて説明します。	Here I'll explain\n"2-Player Play."
+3.7	ゲーム中、２コントローラの\nいずれかのボタンを押すと	During a game, press any\nbutton on Controller 2
+3.10	\n２プレイヤーのカーソルが\nあらわれます。	\nand Player 2's cursor\nwill appear.
+3.18	これで２人で協力して\n問題を解くことができます。	Now two players can work\ntogether on a puzzle.
+3.22	３０秒間、２コントローラの\n入力がないと	If Controller 2 is idle\nfor 30 seconds,
+3.25	\nカーソルは消えます。	\nthe cursor disappears.
+3.39	絵が完成すると\n２人の結果が表示されます。	When the picture is done,\nboth players' results appear.
+3.45	これで「ふたりプレイ」の\n説明は終わりです。	That's the end of\n"2-Player Play."
+3.49	それではがんばって下さい。	Good luck!
+4.2	ここでは「たいせん」について\n説明します。	Here I'll explain\n"Versus."
+4.6	もくじで「対戦」を選ぶと\n２人対戦ゲームで遊べます。	Choose "Versus" on the menu\nfor a 2-player battle.
+4.10	対戦は、数字のヒントがある\n「ろんりてき」対戦か、	Versus has a "Logic" battle\nwith all the number hints,
+4.14	数字のヒントが少し隠された\n「かん」対戦を選択できます。	or a "Hunch" battle with\nsome number hints hidden.
+4.18	また、１回戦から３回戦まで\n対戦回数を選択できます。	You can also choose to play\n1 to 3 rounds.
+4.22	問題はランダムに\n選ばれます。	Puzzles are chosen\nat random.
+4.29	赤いペンが１プレイヤーで、\n青いペンが２プレイヤーです。\n	The red pen is Player 1,\nthe blue pen is Player 2.\n
+4.33	正解のマスをぬりつぶすと	Fill in a correct square
+4.37	\n得点が入ります。	\nto score points.
+4.41	１つの列を完成させると	Complete a whole line
+4.51	\n５点のボーナスが入ります。	\nfor a 5-point bonus.
+4.55	タテ、ヨコの列を\n一度に完成させると、	Complete a column and row\nat the same time
+4.83	\n１０点のボーナスが入ります。	\nfor a 10-point bonus.
+4.88	「かん」対戦の場合は、\nヒントが隠された列の\n正解のマスをぬりつぶすと、	In a "Hunch" battle, correct\nsquares in lines with hidden\nhints
+4.101	ヒントが表示されている列の\n二倍の得点が入ります。	score twice the points of\nlines with visible hints.
+4.105	ミスをすると、	Make a mistake
+4.109	\n減点されてしまいます。	\nand you lose points.
+4.124	絵が完成した時に\n得点の多いプレイヤーが\n勝ちとなります。	When the picture is done,\nthe player with the most\npoints wins.
+4.133	制限時間はありませんので、\nこころゆくまで戦って下さい。\n	There's no time limit,\nso battle to your heart's\ncontent!\n
+4.137	これで「たいせん」の説明は\n終わりです。	That's the end of\n"Versus."
+4.141	それではがんばって下さい。	Good luck!

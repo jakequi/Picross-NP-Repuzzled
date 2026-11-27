@@ -42,6 +42,7 @@ def encode(text):
 
 
 SJIS_ROWS = 0x2695   # Shift-JIS row table in bank C0 (Vol. 4: 0x2691; set from volume.py)
+GLYPH_ADD = 0x9C     # ADC #$009C after the row lookup (C0:268D); Vol. 6+: 0xA0 (4 more glyphs)
 
 
 def glyph_index(rom, code):
@@ -49,7 +50,7 @@ def glyph_index(rom, code):
     lead, trail = code >> 8, code & 0xFF
     rows = struct.unpack_from('<3H', rom, SJIS_ROWS)
     v = struct.unpack_from('<H', rom, SJIS_ROWS + 6 + rows[lead - 0x81] + (trail - 0x40) * 2)[0]
-    return v + 0x9C
+    return v + GLYPH_ADD
 
 
 def render_char(ch, font=FONT, size=SIZE, xscale=2):
